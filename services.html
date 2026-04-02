@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Services | MY TAXATION - Expert Financial Hub</title>
+    <meta name="description" content="One-stop destination for ITR filing, GST registration, Loan consultancy, and Business registrations. Trusted by 1M+ users.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: { brand: { 50: '#f0f7ff', 100: '#e0effe', 200: '#bae0fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#207ebe', 700: '#1d6bbd', 900: '#1e548a', 950: '#173354' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root { --brand-main: #207ebe; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; color: #0f172a; }
+        .service-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); background: white; }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-3">
+            <a href="index.html" class="flex items-center gap-2 transition-transform hover:scale-105">
+                <img src="TAXATION-logo.png" class="h-12 md:h-16 object-contain mix-blend-multiply">
+            </a>
+            <div class="hidden lg:flex items-center space-x-1 font-bold text-slate-600">
+                <a href="index.html" class="px-4 py-2 hover:text-brand-600 hover:bg-brand-50/50 rounded-xl">Home</a>
+                <a href="about.html" class="px-4 py-2 hover:text-brand-600 hover:bg-brand-50/50 rounded-xl">About</a>
+                <a href="services.html" class="px-4 py-2 text-brand-600 rounded-xl bg-brand-50/50">Services</a>
+                <a href="reviews.html" class="px-4 py-2 hover:text-brand-600 hover:bg-brand-50/50 rounded-xl">Reviews</a>
+                <a href="contact.html" class="px-4 py-2 hover:text-brand-600 hover:bg-brand-50/50 rounded-xl">Contact</a>
+            </div>
+            <a href="https://wa.me/917495013592" class="px-6 py-2 bg-[#25D366] text-white rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all shadow-lg shadow-green-500/20">Chat Now</a>
+        </div>
+    </nav>
+
+    <!-- Services Hub Section -->
+    <section class="py-24 bg-white border-b border-slate-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <div class="absolute -top-40 -left-40 w-[600px] h-[600px] bg-brand-50 rounded-full blur-[120px] -z-10"></div>
+            <div class="max-w-3xl mb-20">
+                <span class="px-4 py-1.5 rounded-full bg-brand-50 text-brand-600 text-xs font-black uppercase tracking-widest border border-brand-100 mb-6 inline-block">Comprehensive Portfolio</span>
+                <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] mb-8">Our Financial <br><span class="text-brand-600">Expertise Ecosystem</span></h1>
+                <p class="text-xl text-slate-500 font-medium leading-relaxed italic">Everything you need for personal taxes and business compliance, all under one roof.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- ITR -->
+                <a href="itr-filing.html" class="service-card p-10 rounded-[48px] border border-slate-100 group">
+                    <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-brand-600 group-hover:text-white transition-all"><i data-lucide="file-text" class="w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-brand-600 transition-colors">ITR Filing & Planning</h3>
+                    <p class="text-slate-500 font-bold leading-relaxed mb-6">Expert-led Income Tax Returns for individuals and businesses with maximum tax optimization.</p>
+                    <div class="flex items-center gap-2 text-brand-600 font-bold">Know More <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-2"></i></div>
+                </a>
+
+                <!-- GST -->
+                <a href="gst-registration.html" class="service-card p-10 rounded-[48px] border border-slate-100 group">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-all"><i data-lucide="calculator" class="w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">GST Registration</h3>
+                    <p class="text-slate-500 font-bold leading-relaxed mb-6">Complete GST compliance including registration, filing, and reconciliation for hassle-free business.</p>
+                    <div class="flex items-center gap-2 text-blue-600 font-bold">Know More <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-2"></i></div>
+                </a>
+
+                <!-- Loan -->
+                <a href="loan-consultancy.html" class="service-card p-10 rounded-[48px] border border-slate-100 group">
+                    <div class="w-16 h-16 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-green-600 group-hover:text-white transition-all"><i data-lucide="landmark" class="w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-green-600 transition-colors">Loan Consultancy</h3>
+                    <p class="text-slate-500 font-bold leading-relaxed mb-6">Expert documentation support for Business, MSME, and Home loans for faster approvals.</p>
+                    <div class="flex items-center gap-2 text-green-600 font-bold">Know More <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-2"></i></div>
+                </a>
+
+                <!-- TDS -->
+                <a href="tds-return.html" class="service-card p-10 rounded-[48px] border border-slate-100 group">
+                    <div class="w-16 h-16 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-orange-600 group-hover:text-white transition-all"><i data-lucide="receipt" class="w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-orange-600 transition-colors">TDS Returns</h3>
+                    <p class="text-slate-500 font-bold leading-relaxed mb-6">Precision quarterly compliance and certificate generation for your business peace of mind.</p>
+                    <div class="flex items-center gap-2 text-orange-600 font-bold">Know More <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-2"></i></div>
+                </a>
+
+                <!-- Company -->
+                <a href="business-registration.html" class="service-card p-10 rounded-[48px] border border-slate-100 group">
+                    <div class="w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-purple-600 group-hover:text-white transition-all"><i data-lucide="briefcase" class="w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-purple-600 transition-colors">Business Registration</h3>
+                    <p class="text-slate-500 font-bold leading-relaxed mb-6">Incorporation of Pvt Ltd, LLP, and NGOs with speed and absolute legal clarity.</p>
+                    <div class="flex items-center gap-2 text-purple-600 font-bold">Know More <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-2"></i></div>
+                </a>
+
+                <!-- Notice -->
+                <a href="notice-help.html" class="service-card p-10 rounded-[48px] border border-slate-100 group border-rose-100 bg-rose-50/20">
+                    <div class="w-16 h-16 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-rose-600 group-hover:text-white transition-all"><i data-lucide="alert-circle" class="w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-rose-600 transition-colors italic">IT Notice Help</h3>
+                    <p class="text-slate-500 font-bold leading-relaxed mb-6 italic">Professional representation and reply drafting for all types of legal tax notices.</p>
+                    <div class="flex items-center gap-2 text-rose-600 font-bold italic">Urgent Assistance <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-2"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-900 text-center">
+        <img src="TAXATION-logo.png" class="h-10 mx-auto mb-6 invert grayscale opacity-50">
+        <p class="text-xs font-black text-slate-500 uppercase tracking-widest">&copy; 2026 MY TAXATION. The Gold Standard in Tax Help.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

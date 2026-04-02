@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | MY TAXATION - Leading Tax Consultants in Delhi</title>
+    <meta name="description" content="Learn about MY TAXATION, Delhi's trusted partner for ITR filing, GST, and business registrations. Over 10 years of expertise in tax consultancy.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#207ebe',
+                            700: '#1d6bbd',
+                            900: '#1e548a',
+                            950: '#173354',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --brand-green: #207ebe;
+            --brand-green-hover: #1d6bbd;
+            --brand-blue: #2563eb;
+            --brand-blue-hover: #1e40af;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- ════════════ NAVBAR ════════════ -->
+    <nav id="navbar" class="sticky top-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center px-4 md:px-6 py-3">
+                <a href="index.html" class="flex items-center gap-2 group transition-transform hover:scale-105 active:scale-95">
+                    <img src="TAXATION-logo.png" alt="TAXATION LOGO" class="h-12 md:h-16 w-auto object-contain mix-blend-multiply drop-shadow-sm">
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="px-4 py-2 text-sm font-bold text-slate-600 hover:text-brand-600 rounded-xl transition-all hover:bg-brand-50/50">Home</a>
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-sm font-bold text-slate-600 hover:text-brand-600 rounded-xl transition-all hover:bg-brand-50/50 flex items-center gap-1.5">
+                            Services <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4 z-50">
+                            <div class="w-[300px] bg-white rounded-xl p-3 shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-slate-100 overflow-hidden">
+                                <div class="grid gap-1">
+                                    <a href="itr-filing.html" class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-brand-50 transition-all">
+                                        <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 shadow-sm"><i data-lucide="file-text" class="w-5 h-5"></i></div>
+                                        <div><p class="text-sm font-black text-slate-900">ITR Filing</p><p class="text-[10px] text-slate-400 font-bold uppercase">Income Tax</p></div>
+                                    </a>
+                                    <a href="gst-registration.html" class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-blue-50 transition-all">
+                                        <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 shadow-sm"><i data-lucide="calculator" class="w-5 h-5"></i></div>
+                                        <div><p class="text-sm font-black text-slate-900">GST Registration</p><p class="text-[10px] text-slate-400 font-bold uppercase">Compliance</p></div>
+                                    </a>
+                                    <a href="loan-consultancy.html" class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-green-50 transition-all">
+                                        <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center text-green-600 shadow-sm"><i data-lucide="landmark" class="w-5 h-5"></i></div>
+                                        <div><p class="text-sm font-black text-slate-900">Loan Consultancy</p><p class="text-[10px] text-slate-400 font-bold uppercase">Business Loans</p></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="px-3 py-2 text-sm font-bold text-brand-600 rounded-xl transition-all hover:bg-brand-50/50">About Us</a>
+                    <a href="reviews.html" class="px-3 py-2 text-sm font-bold text-slate-600 hover:text-brand-600 rounded-xl transition-all hover:bg-brand-50/50">Reviews</a>
+                    <a href="contact.html" class="px-3 py-2 text-sm font-bold text-slate-600 hover:text-brand-600 rounded-xl transition-all hover:bg-brand-50/50">Contact Us</a>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <a href="https://wa.me/917495013592" target="_blank" class="flex items-center gap-2 px-4 py-2 bg-green-50 text-[#25D366] border border-[#25D366]/20 rounded-full font-bold text-sm hover:bg-[#25D366] hover:text-white transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>07495013592</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ════════════ ABOUT CONTENT ════════════ -->
+    <main class="pt-20 pb-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <span class="px-4 py-2 rounded-full bg-brand-50 text-brand-600 text-sm font-bold">About My Taxation</span>
+                <h1 class="text-4xl md:text-6xl font-black text-slate-900 mt-6 mb-8">Delhi's Trusted Tax <br><span class="text-brand-600">Consultancy Partner</span></h1>
+                <p class="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
+                    With over a decade of experience, we've helped thousands of individuals and businesses navigate the complex world of Indian taxes with ease and precision.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20 animate-fade-in-up" style="animation-delay:0.2s">
+                <div class="rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1000" alt="Professional Accountant" class="w-full h-full object-cover">
+                </div>
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold text-slate-900">Our Mission</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Our mission is to simplify the taxation process for every Indian citizen. We believe that professional financial advice should be accessible, affordable, and transparent. We combine modern technology with expert human oversight to deliver the best results.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-6">
+                        <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                            <p class="text-3xl font-black text-brand-600">10+</p>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Years Experience</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                            <p class="text-3xl font-black text-brand-600">1M+</p>
+                            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Trusted Users</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ════════════ FOOTER ════════════ -->
+    <footer class="bg-white border-t border-slate-100 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1 space-y-6">
+                    <img src="TAXATION-logo.png" alt="LOGO" class="h-12 w-auto">
+                    <p class="text-sm text-slate-500 font-medium">Expert tax solutions at your fingertips. Serving Delhi since 2014.</p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-black text-slate-900 mb-6 uppercase tracking-wider">Services</h3>
+                    <ul class="space-y-4 text-sm font-bold text-slate-500">
+                        <li><a href="itr-filing.html" class="hover:text-brand-600">ITR Filing</a></li>
+                        <li><a href="gst-registration.html" class="hover:text-brand-600">GST Registration</a></li>
+                        <li><a href="loan-consultancy.html" class="hover:text-brand-600">Loans</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-black text-slate-900 mb-6 uppercase tracking-wider">Contact</h3>
+                    <ul class="space-y-4 text-sm font-bold text-slate-500">
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-brand-600"></i> 074950 13592</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-brand-600"></i> contact@mytaxation.in</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-black text-slate-900 mb-6 uppercase tracking-wider">Follow Us</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center hover:bg-brand-600 hover:text-white transition-all"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center hover:bg-brand-600 hover:text-white transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-100 text-center text-xs font-bold text-slate-400">
+                &copy; 2026 MY TAXATION. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
