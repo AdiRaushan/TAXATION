@@ -3,52 +3,1156 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Business Registration | MY TAXATION - Pvt Ltd, LLP, NGO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Registration & Compliance | MY TAXATION - Pvt Ltd, LLP, OPC</title>
+    <meta name="description"
+        content="Register your business in India easily. Pvt Ltd, LLP, OPC, and Sole Proprietorship registration with full MCA compliance support. Get DSC & DIN within hours.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="TAXATION-logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }</style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#207ebe',
+                            700: '#1d6bbd',
+                            900: '#1e548a',
+                            950: '#173354',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            /* BRAND COLOR PALETTE */
+            --brand-green: #207ebe;
+            --brand-green-hover: #1d6bbd;
+            --brand-blue: #2563eb;
+            --brand-blue-hover: #1e40af;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        .faq-answer {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .faq-answer.open {
+            max-height: 300px;
+            opacity: 1;
+            padding-top: 1rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .comparison-card {
+            transition: all 0.3s ease;
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -12px rgba(32, 126, 190, 0.15);
+        }
+    </style>
 </head>
 
-<body class="antialiased">
+<body class="antialiased selection:bg-brand-500 selection:text-white">
 
-    <nav class="bg-white border-b py-3 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <a href="index.html"><img src="TAXATION-logo.png" class="h-12 md:h-16 mix-blend-multiply"></a>
-            <div class="flex gap-4 font-black text-sm text-slate-600"> <a href="index.html" class="px-4 py-2 hover:bg-slate-50 rounded-xl transition-all">Home</a> <a href="contact.html" class="px-6 py-2 bg-purple-600 text-white rounded-full">Register Business</a> </div>
+    <!-- ════════════ NAVBAR (Copied from index.html) ════════════ -->
+    <nav id="navbar" class="sticky top-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center px-4 md:px-6 py-3">
+
+                <!-- Premium Logo -->
+                <a href="index.html"
+                    class="flex items-center gap-2 group transition-transform hover:scale-105 active:scale-95">
+                    <img src="TAXATION-logo.png" alt="TAXATION LOGO"
+                        class="h-12 md:h-16 w-auto object-contain mix-blend-multiply drop-shadow-sm">
+                </a>
+
+                <!-- Modern Dropdown Navigation (Desktop) -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html"
+                        class="px-4 py-2 text-sm font-bold text-slate-600 hover:text-brand-600 rounded-xl transition-all hover:bg-brand-50/50">Home</a>
+
+                    <div class="relative group">
+                        <button
+                            class="px-4 py-2 text-sm font-bold text-brand-600 rounded-xl transition-all hover:bg-brand-50/50 flex items-center gap-1.5 translate-z-0">
+                            Services <i data-lucide="chevron-down"
+                                class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <!-- Pure White Mega Menu -->
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4 z-50">
+                            <div
+                                class="w-[300px] bg-white rounded-xl p-3 shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-slate-100 overflow-hidden text-left">
+                                <div class="grid gap-1">
+                                    <a href="itr-filing.html"
+                                        class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-brand-50 transition-all group/item">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 group-hover/item:bg-brand-600 group-hover/item:text-white transition-all shadow-sm">
+                                            <i data-lucide="file-text" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-black text-slate-900">ITR Filing & Planning</p>
+                                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">
+                                                Income Tax Returns</p>
+                                        </div>
+                                    </a>
+                                    <a href="gst-registration.html"
+                                        class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-blue-50 transition-all group/item">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all shadow-sm">
+                                            <i data-lucide="calculator" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-black text-slate-900">GST Registration</p>
+                                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">
+                                                Filing & Compliance</p>
+                                        </div>
+                                    </a>
+                                    <a href="bookkeeping.html"
+                                        class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-orange-50 transition-all group/item">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center text-orange-600 group-hover/item:bg-orange-600 group-hover/item:text-white transition-all shadow-sm">
+                                            <i data-lucide="book-open" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-black text-slate-900">Bookkeeping & Accounting</p>
+                                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">
+                                                Financial MIS</p>
+                                        </div>
+                                    </a>
+                                    <a href="business-registration.html"
+                                        class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-emerald-50 transition-all group/item">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all shadow-sm">
+                                            <i data-lucide="briefcase" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-black text-slate-900">Business Registration</p>
+                                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">Pvt
+                                                Ltd, LLP, NGO</p>
+                                        </div>
+                                    </a>
+                                    <a href="loan-consultancy.html"
+                                        class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-indigo-50 transition-all group/item">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-all shadow-sm">
+                                            <i data-lucide="landmark" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-black text-slate-900">Loan Consultancy</p>
+                                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">
+                                                CMA Data & MSME Loans</p>
+                                        </div>
+                                    </a>
+                                    <a href="notice-help.html"
+                                        class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-rose-50 transition-all group/item">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center text-rose-600 group-hover/item:bg-rose-600 group-hover/item:text-white transition-all shadow-sm">
+                                            <i data-lucide="alert-circle" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-black text-slate-900">Notice Help</p>
+                                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">IT
+                                                Notice Replies</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="about.html"
+                        class="px-3 py-2 text-sm font-bold text-slate-600 hover:text-brand-600 rounded-xl transition-all hover:bg-brand-50/50">About
+                        Us</a>
+                    <a href="reviews.html"
+                        class="px-3 py-2 text-sm font-bold text-slate-600 hover:text-brand-600 rounded-xl transition-all hover:bg-brand-50/50">Reviews</a>
+                    <a href="contact.html"
+                        class="px-3 py-2 text-sm font-bold text-slate-600 hover:text-brand-600 rounded-xl transition-all hover:bg-brand-50/50">Contact
+                        Us</a>
+                </div>
+
+                <!-- WhatsApp & Menu -->
+                <div class="flex items-center gap-2 md:gap-3">
+                    <a href="https://wa.me/917495013592" target="_blank"
+                        class="group flex items-center gap-1.5 md:gap-2.5 px-3 md:px-6 py-2 md:py-2.5 bg-green-50 text-[#25D366] border border-[#25D366]/20 rounded-full font-bold text-sm md:text-base hover:bg-[#25D366] hover:text-white transition-all duration-300 shadow-sm active:scale-95">
+                        <i data-lucide="message-circle" class="w-4 h-4 md:w-5 md:h-5"></i>
+                        <span>07495013592</span>
+                    </a>
+
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+                        class="lg:hidden p-2 text-slate-600 hover:bg-slate-50 rounded-xl transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Drawer (Copied and modified) -->
+            <div id="mobile-menu"
+                class="hidden lg:hidden mt-2 bg-white rounded-xl p-4 border border-slate-100 shadow-2xl animate-fade-in-up">
+                <div class="grid gap-2">
+                    <a href="index.html"
+                        class="px-4 py-3 text-sm font-bold text-brand-600 hover:bg-brand-50 rounded-xl transition-all">Home</a>
+                    <details class="group text-left">
+                        <summary
+                            class="flex items-center justify-between px-4 py-3 text-sm font-bold text-slate-600 hover:bg-brand-50 hover:text-brand-600 rounded-xl transition-all cursor-pointer list-none">
+                            Services <i data-lucide="chevron-down"
+                                class="w-4 h-4 group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <div class="grid gap-1 mt-1 pl-4">
+                            <a href="itr-filing.html"
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-brand-600">ITR Filing</a>
+                            <a href="gst-registration.html"
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-blue-600">GST
+                                Registration</a>
+                            <a href="bookkeeping.html"
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-orange-600">Bookkeeping &
+                                Accounting</a>
+                            <a href="business-registration.html"
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-emerald-600">Business
+                                Registration</a>
+                            <a href="loan-consultancy.html"
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-indigo-600">Loan
+                                Consultancy</a>
+                            <a href="notice-help.html"
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-rose-600">Notice Help</a>
+                        </div>
+                    </details>
+                    <a href="about.html"
+                        class="px-4 py-3 text-sm font-bold text-slate-600 hover:bg-brand-50 hover:text-brand-600 rounded-xl transition-all">About
+                        Us</a>
+                    <a href="reviews.html"
+                        class="px-4 py-3 text-sm font-bold text-slate-600 hover:bg-brand-50 hover:text-brand-600 rounded-xl transition-all">Reviews</a>
+                    <a href="contact.html"
+                        class="px-4 py-3 text-sm font-bold text-slate-600 hover:bg-brand-50 hover:text-brand-600 rounded-xl transition-all">Contact
+                        Us</a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <header class="py-24 bg-gradient-to-br from-purple-900 to-indigo-950 text-white text-center">
-        <div class="max-w-7xl mx-auto px-6">
-            <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight">Start Your <br><span class="text-purple-400">Dream Business</span></h1>
-            <p class="text-xl text-purple-200 mb-10 max-w-2xl mx-auto">From Pvt Ltd to LLP and NGO, we help you incorporate and organize your entity with 100% legal compliance and speed.</p>
-            <div class="flex gap-4 justify-center"> <a href="https://wa.me/917495013592" class="px-10 py-5 bg-white text-purple-900 rounded-3xl font-black text-lg hover:scale-105 active:scale-95 transition-all">WhatsApp Consultant</a> </div>
-        </div>
-    </header>
-
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="p-8 border rounded-[40px] border-slate-100 bg-slate-50 hover:bg-purple-50 hover:border-purple-200 transition-all">
-                <i data-lucide="briefcase" class="w-10 h-10 text-purple-600 mb-6"></i>
-                <h3 class="text-2xl font-black text-slate-900 mb-4">Pvt Ltd Company</h3>
-                <p class="text-slate-500 font-bold">Standard registration for high-growth startups and established businesses with maximum liability protection.</p>
+    <!-- ════════════ HERO / BANNER ════════════ -->
+    <section class="relative pt-20 pb-32 overflow-hidden bg-white">
+        <div class="absolute inset-0 bg-brand-50/30 -z-10"></div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="animate-fade-in-up">
+                <span
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-black uppercase tracking-widest mb-6">
+                    <i data-lucide="gem" class="w-4 h-4"></i> MCA Certified Filings
+                </span>
+                <h1 class="text-5xl md:text-6xl font-black text-slate-900 leading-tight mb-8">
+                    Business Registration <br />
+                    <span class="text-brand-600">& Compliance</span>
+                </h1>
+                <p class="text-lg text-slate-500 font-medium leading-relaxed max-w-lg mb-8">
+                    Turn your business idea into a legal entity. From Pvt Ltd to Sole Proprietorship, we handle
+                    end-to-end registration and ROC compliance.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="contact.html"
+                        class="px-8 py-4 bg-brand-600 text-white rounded-xl font-black text-center shadow-lg shadow-brand-600/20 hover:bg-brand-700 hover:-translate-y-1 transition-all">Get
+                        Started</a>
+                    <a href="#comparison"
+                        class="px-8 py-4 bg-white border-2 border-slate-100 text-slate-600 rounded-xl font-black text-center hover:border-brand-600 hover:text-brand-600 transition-all">Compare
+                        Entities</a>
+                </div>
             </div>
-            <div class="p-8 border rounded-[40px] border-slate-100 bg-slate-50 hover:bg-purple-50 hover:border-purple-200 transition-all">
-                <i data-lucide="users" class="w-10 h-10 text-purple-600 mb-6"></i>
-                <h3 class="text-2xl font-black text-slate-900 mb-4">Limited Liability (LLP)</h3>
-                <p class="text-slate-500 font-bold">The perfect balance between a partnership and a pvt ltd company with simplified compliance Requirements.</p>
-            </div>
-            <div class="p-8 border rounded-[40px] border-slate-100 bg-slate-50 hover:bg-purple-50 hover:border-purple-200 transition-all">
-                <i data-lucide="heart" class="w-10 h-10 text-purple-600 mb-6"></i>
-                <h3 class="text-2xl font-black text-slate-900 mb-4">NGO / Section 8</h3>
-                <p class="text-slate-500 font-bold">Dedicated support for non-profit organizations and charitable societies registration and 12A/80G approvals.</p>
+            <div class="relative hidden md:block">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Company Setup" class="rounded-[48px] shadow-2xl skew-x-1">
+                <div
+                    class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-50 animate-bounce">
+                    <i data-lucide="check-circle-2" class="w-10 h-10 text-brand-600 mb-2"></i>
+                    <p class="text-xs font-black text-slate-400">Application</p>
+                    <p class="text-xl font-black text-brand-600">Approved</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-slate-100 text-center"><p class="text-sm font-black text-slate-400 uppercase tracking-widest">&copy; 2026 MY TAXATION. Build it Right.</p></footer>
-    <script>lucide.createIcons();</script>
+    <!-- ════════════ WHY REGISTER A COMPANY? ════════════ -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-brand-600 text-[10px] font-black uppercase tracking-[0.4em]">Why It Matters</span>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">Why Should You Consider <br />
+                    <span class="text-brand-600">Business Registration?</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Legal Protection -->
+                <div
+                    class="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i data-lucide="shield" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-black text-slate-900 mb-4">Legal Protection & Reputation</h4>
+                    <p class="text-slate-500 font-medium leading-relaxed">Incorporation gives your business its own
+                        legal identity, shielding personal assets and significantly boosting credibility with clients
+                        and partners.</p>
+                </div>
+
+                <!-- Limited Liability -->
+                <div
+                    class="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i data-lucide="user-check" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-black text-slate-900 mb-4">Limited Liability</h4>
+                    <p class="text-slate-500 font-medium leading-relaxed">Protect your personal savings. Your
+                        responsibility for company debts is limited to your capital, ensuring financial safety for you
+                        and your family.</p>
+                </div>
+
+                <!-- Funding -->
+                <div
+                    class="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i data-lucide="banknote" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-black text-slate-900 mb-4">Better Funding Opportunities</h4>
+                    <p class="text-slate-500 font-medium leading-relaxed">Registered companies have a higher trust
+                        factor with banks. Gain easier access to business loans, credit lines, and institutional
+                        finance.</p>
+                </div>
+
+                <!-- Equity Capital -->
+                <div
+                    class="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
+                    <div
+                        class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i data-lucide="trending-up" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-black text-slate-900 mb-4">Attract Equity Investment</h4>
+                    <p class="text-slate-500 font-medium leading-relaxed">If you plan to scale, investors and VCs only
+                        invest in incorporated entities (like Pvt Ltd), making it essential for raising capital.</p>
+                </div>
+
+                <!-- Time & Effort -->
+                <div
+                    class="bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm hover:shadow-xl transition-all group md:col-span-2 lg:col-span-1">
+                    <div
+                        class="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-black text-slate-900 mb-4">Fast & Effortless Online Process</h4>
+                    <p class="text-slate-500 font-medium leading-relaxed">We handle the entire MCA process online. Save
+                        weeks of manual paperwork and focus purely on your business growth from day one.</p>
+                </div>
+            </div>
+
+            <!-- CTA AREA -->
+            <div
+                class="bg-brand-600 rounded-[40px] p-8 md:p-12 text-center text-white relative overflow-hidden shadow-2xl shadow-brand-600/30">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[80px] -z-0 rounded-full"></div>
+                <h3 class="text-3xl font-black mb-4 relative z-10">Start Your Business Journey Today</h3>
+                <p class="text-brand-100 font-medium mb-10 max-w-xl mx-auto relative z-10">Don't let complex paperwork
+                    hold you back. Get your COI within 15 days with our expert assistance.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+                    <a href="https://wa.me/917495013592" target="_blank"
+                        class="w-full sm:w-auto px-8 py-4 bg-[#25D366] text-white rounded-2xl font-black flex items-center justify-center gap-3 hover:scale-105 transition-all shadow-xl">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i> WhatsApp Expert
+                    </a>
+                    <a href="tel:+917495013592"
+                        class="w-full sm:w-auto px-8 py-4 bg-white text-brand-600 rounded-2xl font-black flex items-center justify-center gap-3 hover:scale-105 transition-all shadow-xl">
+                        <i data-lucide="phone" class="w-6 h-6"></i> Call Now (+91)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ ENTITY COMPARISON ════════════ -->
+    <section id="comparison" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-4xl font-black text-slate-900 mb-6">Choose Your Entity Type</h2>
+            <p class="text-slate-500 font-medium max-w-2xl mx-auto">Compare different business structures to find the
+                perfect fit for your vision.</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Pvt Ltd -->
+                <div class="bg-brand-50 p-8 rounded-[40px] border border-brand-100 comparison-card">
+                    <h3 class="text-2xl font-black text-brand-700 mb-4">Pvt Ltd</h3>
+                    <ul class="space-y-4 text-sm font-bold text-slate-600 mb-8">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                            Limited Liability</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                            Scalability (Investors)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                            Startup India Benefit</li>
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-4 h-4 text-slate-300"></i>
+                            Higher
+                            Compliance</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="block w-full py-3 bg-white text-center rounded-xl font-black text-brand-600 border border-brand-200">Select
+                        Pvt Ltd</a>
+                </div>
+                <!-- LLP -->
+                <div class="bg-white p-8 rounded-[40px] border border-slate-100 comparison-card shadow-sm">
+                    <h3 class="text-2xl font-black text-brand-900 mb-4">LLP</h3>
+                    <ul class="space-y-4 text-sm font-bold text-slate-600 mb-8">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                            Low Compliance Cost</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                            Partnership Format</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                            Limited Liability</li>
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-4 h-4 text-slate-300"></i> Low
+                            Exit Flexibility</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="block w-full py-3 bg-brand-50 text-center rounded-xl font-black text-brand-600">Select
+                        LLP</a>
+                </div>
+                <!-- OPC -->
+                <div class="bg-white p-8 rounded-[40px] border border-slate-100 comparison-card shadow-sm">
+                    <h3 class="text-2xl font-black text-brand-900 mb-4">OPC</h3>
+                    <ul class="space-y-4 text-sm font-bold text-slate-600 mb-8">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                            Single Owner/Director</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                            Separate Legal Entity</li>
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-4 h-4 text-slate-300"></i>
+                            Turnover Limit</li>
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-4 h-4 text-slate-300"></i> No
+                            Multiple Partners</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="block w-full py-3 bg-brand-50 text-center rounded-xl font-black text-brand-600">Select
+                        OPC</a>
+                </div>
+                <!-- Sole Prop -->
+                <div class="bg-white p-8 rounded-[40px] border border-slate-100 comparison-card shadow-sm">
+                    <h3 class="text-2xl font-black text-brand-900 mb-4">Proprietorship</h3>
+                    <ul class="space-y-4 text-sm font-bold text-slate-600 mb-8">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                            Zero Compliance</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i>
+                            Easy & Cheap Setup</li>
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-4 h-4 text-slate-300"></i>
+                            Unlimited Liability</li>
+                        <li class="flex items-center gap-2"><i data-lucide="x" class="w-4 h-4 text-slate-300"></i>
+                            Difficult Fundraising</li>
+                    </ul>
+                    <a href="contact.html"
+                        class="block w-full py-3 bg-brand-50 text-center rounded-xl font-black text-brand-600">Select
+                        Prop.</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ WHAT'S INCLUDED ════════════ -->
+    <section class="py-24 bg-brand-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-black mb-8 leading-tight">Everything You Need <br /> To Get Started</h2>
+                <p class="text-brand-100 font-medium mb-12">No hidden costs. We provide a full incorporation kit with
+                    every registration.</p>
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-brand-400">
+                            <i data-lucide="briefcase" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-black text-lg">MCA Filing</h4>
+                        <p class="text-[10px] text-brand-200 uppercase tracking-wider font-bold">SPICe+ Forms</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-brand-400">
+                            <i data-lucide="edit-3" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-black text-lg">DIN & DSC</h4>
+                        <p class="text-[10px] text-brand-200 uppercase tracking-wider font-bold">For All Directors</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-brand-400">
+                            <i data-lucide="files" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-black text-lg">MoA & AoA</h4>
+                        <p class="text-[10px] text-brand-200 uppercase tracking-wider font-bold">Charter Documents</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-brand-400">
+                            <i data-lucide="landmark" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-black text-lg">Authorised Capital</h4>
+                        <p class="text-[10px] text-brand-200 uppercase tracking-wider font-bold">Initial Investment</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-brand-400">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-black text-lg">Shareholding Pattern</h4>
+                        <p class="text-[10px] text-brand-200 uppercase tracking-wider font-bold">Ownership Structure</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-brand-400">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-black text-lg">Object Clause</h4>
+                        <p class="text-[10px] text-brand-200 uppercase tracking-wider font-bold">Business Scope</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/5 border border-white/10 p-12 rounded-[48px] backdrop-blur-sm">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80"
+                    alt="Registration Documents" class="rounded-3xl mb-8 opacity-90">
+                <p class="text-brand-100 text-sm font-medium italic">"Incorporation is the most important legal step of
+                    your entrepreneurial journey. We ensure it's built on a solid foundation."</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ════════════ COMPLIANCE CALENDAR ════════════ -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-black text-slate-900 mb-8 leading-tight">Post-Registration <br />Compliance
+                        Calendar</h2>
+                    <p class="text-slate-500 font-medium mb-12">A company isn't just about registration. Staying
+                        compliant avoids heavy penalties and director disqualification.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-3xl shadow-sm border border-slate-100">
+                            <div
+                                class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 shrink-0">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-slate-900">ROC Annual Return</h4>
+                                <p class="text-xs text-slate-400 font-bold uppercase mt-1">Due: Oct - Nov every year</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-3xl shadow-sm border border-slate-100">
+                            <div
+                                class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 shrink-0">
+                                <i data-lucide="users-2" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-slate-900">Annual General Meeting (AGM)</h4>
+                                <p class="text-xs text-slate-400 font-bold uppercase mt-1">Mandatory within 6 months of
+                                    FY end</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-3xl shadow-sm border border-slate-100">
+                            <div
+                                class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 shrink-0">
+                                <i data-lucide="landmark" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-slate-900">Statutory Audit</h4>
+                                <p class="text-xs text-slate-400 font-bold uppercase mt-1">CA certified financial
+                                    verification</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-600 p-12 rounded-[56px] text-white">
+                    <h4 class="text-2xl font-black mb-6 italic">Compliance Alert</h4>
+                    <p class="text-brand-50 text-sm leading-relaxed mb-10">Late filing of ROC forms can cost up to <span
+                            class="bg-white text-brand-900 px-2 font-black rounded">₹100 Per Day</span>. We automate
+                        your calendar so you never miss a deadline.</p>
+                    <div class="p-8 border border-white/20 rounded-3xl bg-white/5">
+                        <ul class="space-y-4">
+                            <li class="flex items-center justify-between font-bold text-sm">
+                                <span>Form ADT-01</span>
+                                <span class="bg-brand-400 text-[10px] px-2 py-0.5 rounded uppercase">Auditor
+                                    Appoint</span>
+                            </li>
+                            <li class="flex items-center justify-between font-bold text-sm">
+                                <span>Form AOC-04</span>
+                                <span class="bg-brand-400 text-[10px] px-2 py-0.5 rounded uppercase">Financials</span>
+                            </li>
+                            <li class="flex items-center justify-between font-bold text-sm">
+                                <span>Form MGT-07</span>
+                                <span class="bg-brand-400 text-[10px] px-2 py-0.5 rounded uppercase">Annual
+                                    Return</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ STARTUP INDIA / MSME ════════════ -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-brand-950 p-12 md:p-20 rounded-[64px] text-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-600/20 blur-[100px]"></div>
+                <h2 class="text-4xl font-black text-white mb-8">Startup India & MSME Add-ons</h2>
+                <p class="text-brand-100 font-medium max-w-2xl mx-auto mb-16">Unlock 80IAC tax exemptions and government
+                    tenders with DPIIT recognition and Udyam registration.</p>
+                <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                    <div
+                        class="text-left bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all cursor-default">
+                        <div
+                            class="w-12 h-12 bg-white text-brand-900 rounded-xl flex items-center justify-center font-black mb-6">
+                            S</div>
+                        <h4 class="text-2xl font-black text-white mb-4">Startup India</h4>
+                        <ul class="space-y-3 text-sm text-brand-200 font-bold">
+                            <li>• 3 Years Income Tax Exemption</li>
+                            <li>• Fast Tracking Patent Apps</li>
+                            <li>• Easy Public Procurement</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="text-left bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all cursor-default">
+                        <div
+                            class="w-12 h-12 bg-white text-brand-900 rounded-xl flex items-center justify-center font-black mb-6">
+                            M</div>
+                        <h4 class="text-2xl font-black text-white mb-4">MSME / Udyam</h4>
+                        <ul class="space-y-3 text-sm text-brand-200 font-bold">
+                            <li>• Collateral Free Loans</li>
+                            <li>• Electricity Bill Subsidy</li>
+                            <li>• ISO Certification Refund</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ DOCUMENTS CHECKLIST ════════════ -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div>
+                <h2 class="text-4xl font-black text-slate-900 mb-8 leading-tight">Documents Required for <br /> <span
+                        class="text-brand-600">Business Registration</span></h2>
+                <p class="text-slate-500 font-medium mb-12 italic text-sm">Submit scanned copies only for digital
+                    processing. General documents required for LLP, OPC, Pvt Ltd, and Public Ltd.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <!-- Entity Structure -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+                    <div class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <i data-lucide="layout" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-black text-brand-900 mb-4 uppercase tracking-wider text-xs">Entity Structure</h4>
+                    <ul class="space-y-4 text-sm font-bold text-slate-600">
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-brand-600 shrink-0 mt-1"></i> <span>Private Ltd: 2 Directors & 2
+                                Shareholders</span></li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-brand-600 shrink-0 mt-1"></i> <span>OPC: 1 Director + 1
+                                Nominee</span></li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-brand-600 shrink-0 mt-1"></i> <span>Public Ltd: 3 Directors & 7
+                                Shareholders</span></li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-brand-600 shrink-0 mt-1"></i> <span>2–3 Proposed Company Names
+                                (Preferential Order)</span></li>
+                    </ul>
+                </div>
+
+                <!-- KYC for Directors -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+                    <div class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <i data-lucide="user-plus" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-black text-brand-900 mb-4 uppercase tracking-wider text-xs">Director & Shareholder
+                        KYC</h4>
+                    <div class="space-y-4 text-sm font-bold text-slate-600">
+                        <p class="text-xs text-brand-600 bg-brand-50 px-2 py-1 rounded inline-block">Mandatory for all
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-brand-600"></i> Pan Card (Mandatory)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-brand-600"></i> Passport Size Photo</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-brand-600 shrink-0 mt-1"></i> <span>Identity Proof: Aadhaar /
+                                    Voter ID / Passport / DL</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-brand-600 shrink-0 mt-1"></i> <span>Address Proof: Bank/Utility
+                                    Bill (Not older than 2 months)</span></li>
+                            <li class="flex items-start gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-brand-600 shrink-0 mt-1"></i> <span>Details: Mobile, Email,
+                                    Qualification, Place of Birth</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Office & Legal -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all">
+                    <div class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <i data-lucide="file-check-2" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="font-black text-brand-900 mb-4 uppercase tracking-wider text-xs">Office & Legal</h4>
+                    <ul class="space-y-3 text-sm font-bold text-slate-600">
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-brand-600 shrink-0 mt-1"></i> <span>Latest Electricity/Utility Bill
+                                for Office</span></li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-brand-600 shrink-0 mt-1"></i> <span>Rent Agreement & NOC (if Rented)
+                                or Ownership Proof</span></li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-brand-600 shrink-0 mt-1"></i> <span>Police Station Details (Nearest
+                                Jurisdiction)</span></li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-brand-600 shrink-0 mt-1"></i> <span>Draft MoA, AoA & Business Object
+                                Details</span></li>
+                        <li class="flex items-start gap-2"><i data-lucide="check"
+                                class="w-4 h-4 text-brand-600 shrink-0 mt-1"></i> <span>Authorised & Paid-up Capital
+                                Structure</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Checklist" class="rounded-[40px] shadow-2xl">
+                <div
+                    class="absolute -top-10 -right-10 bg-brand-600 text-white p-12 rounded-full border-4 border-white font-black text-3xl shadow-2xl animate-pulse">
+                    100%<br /><span class="text-xs uppercase tracking-widest font-bold">Secure</span></div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ════════════ HOW IT WORKS ════════════ -->
+    <section id="process" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24 space-y-4">
+                <span class="text-brand-600 text-[10px] font-black uppercase tracking-[0.4em]">The Incorporation
+                    Roadmap</span>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">Your 15-Day Journey to <br />
+                    <span class="text-brand-600">Business Registration</span>
+                </h2>
+            </div>
+
+            <div class="relative max-w-6xl mx-auto">
+                <!-- Connector Line -->
+                <div
+                    class="absolute top-[4.5rem] left-[50%] -translate-x-1/2 w-0.5 h-[calc(100%-9rem)] bg-brand-100 hidden md:block">
+                </div>
+
+                <div class="space-y-16">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center gap-12 group">
+                        <div class="w-full md:w-1/2 order-1 md:text-right hidden md:block animate-fade-in-up">
+                            <h4 class="text-2xl font-black text-slate-900 mb-2">Step 1: Document KYC</h4>
+                            <p class="text-slate-500 font-medium leading-relaxed max-w-md ml-auto">Share your 2-3
+                                proposed names and basic KYC documents of directors through our secure portal. We’ll
+                                verify everything for MCA compliance.</p>
+                        </div>
+                        <div
+                            class="relative z-10 w-20 h-20 bg-white border-8 border-brand-50 rounded-full flex items-center justify-center text-brand-600 shadow-xl group-hover:scale-110 transition-transform order-2">
+                            <i data-lucide="file-search" class="w-6 h-6"></i>
+                            <span
+                                class="absolute -top-4 -right-4 bg-brand-600 text-white text-[10px] font-black px-3 py-1 rounded-full shadow-lg">DAY
+                                1</span>
+                        </div>
+                        <div class="w-full md:w-1/2 order-3 md:hidden">
+                            <h4 class="text-2xl font-black text-slate-900 mb-2">Step 1: Document KYC</h4>
+                            <p class="text-slate-500 font-medium leading-relaxed">Share your 2-3 proposed names and
+                                basic KYC documents of directors through our secure portal. We’ll verify everything for
+                                MCA compliance.</p>
+                        </div>
+                        <div class="w-full md:w-1/2 order-3 hidden md:block"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row items-center gap-12 group">
+                        <div class="w-full md:w-1/2 order-1 hidden md:block"></div>
+                        <div
+                            class="relative z-10 w-20 h-20 bg-white border-8 border-brand-50 rounded-full flex items-center justify-center text-brand-600 shadow-xl group-hover:scale-110 transition-transform order-2 md:order-2">
+                            <i data-lucide="key" class="w-6 h-6"></i>
+                            <span
+                                class="absolute -top-4 -left-4 bg-brand-600 text-white text-[10px] font-black px-3 py-1 rounded-full shadow-lg whitespace-nowrap">DAY
+                                2-4</span>
+                        </div>
+                        <div class="w-full md:w-1/2 order-3 md:order-3 animate-fade-in-up">
+                            <h4 class="text-2xl font-black text-slate-900 mb-2">Step 2: DSC & DIN Prep</h4>
+                            <p class="text-slate-500 font-medium leading-relaxed max-w-md">We apply for Digital
+                                Signature Certificates and Director Identification Numbers. These are prerequisites for
+                                any official MCA filing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-center gap-12 group">
+                        <div class="w-full md:w-1/2 order-1 md:text-right hidden md:block animate-fade-in-up">
+                            <h4 class="text-2xl font-black text-slate-900 mb-2">Step 3: SPICe+ Drafting</h4>
+                            <p class="text-slate-500 font-medium leading-relaxed max-w-md ml-auto">We draft legal
+                                documents (MOA & AOA) and file the SPICe+ form on the MCA portal for name approval and
+                                incorporation status.</p>
+                        </div>
+                        <div
+                            class="relative z-10 w-20 h-20 bg-white border-8 border-brand-50 rounded-full flex items-center justify-center text-brand-600 shadow-xl group-hover:scale-110 transition-transform order-2">
+                            <i data-lucide="send" class="w-6 h-6"></i>
+                            <span
+                                class="absolute -top-4 -right-4 bg-brand-600 text-white text-[10px] font-black px-3 py-1 rounded-full shadow-lg whitespace-nowrap">DAY
+                                5-10</span>
+                        </div>
+                        <div class="w-full md:w-1/2 order-3 md:hidden">
+                            <h4 class="text-2xl font-black text-slate-900 mb-2">Step 3: SPICe+ Drafting</h4>
+                            <p class="text-slate-500 font-medium leading-relaxed">We draft legal documents (MOA & AOA)
+                                and file the SPICe+ form on the MCA portal for name approval and incorporation status.
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2 order-3 hidden md:block"></div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row items-center gap-12 group">
+                        <div class="w-full md:w-1/2 order-1 hidden md:block"></div>
+                        <div
+                            class="relative z-10 w-20 h-20 bg-white border-8 border-brand-50 rounded-full flex items-center justify-center text-brand-600 shadow-xl group-hover:scale-110 transition-transform order-2 md:order-2">
+                            <i data-lucide="party-popper" class="w-6 h-6"></i>
+                            <span
+                                class="absolute -top-4 -left-4 bg-brand-600 text-white text-[10px] font-black px-3 py-1 rounded-full shadow-lg whitespace-nowrap">DAY
+                                11-15</span>
+                        </div>
+                        <div class="w-full md:w-1/2 order-3 md:order-3 animate-fade-in-up">
+                            <h4 class="text-2xl font-black text-slate-900 mb-2">Step 4: COI & PAN/TAN</h4>
+                            <p class="text-slate-500 font-medium leading-relaxed max-w-md">Once the Registrar (ROC)
+                                verifies the filing, you’ll receive your Certificate of Incorporation, PAN, and TAN
+                                numbers via email.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ REVIEWS (COMMON) ════════════ -->
+    <section id="reviews" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-brand-600 text-[10px] font-black uppercase tracking-[0.4em]">Testimonials</span>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">Voices of <br />
+                    <span class="text-brand-600">Excellence</span>
+                </h2>
+                <p class="text-slate-500 font-medium text-lg max-w-2xl mx-auto">Real stories from entrepreneurs across
+                    India who trust our registration expertise.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
+                <!-- Review 1 -->
+                <div
+                    class="bg-white p-5 rounded-xl border border-slate-100 space-y-6 flex flex-col hover:shadow-2xl transition-all duration-300 relative group">
+                    <div class="absolute top-5 right-8"><img
+                            src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                            alt="Google" class="h-4"></div>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-black text-lg">
+                            K</div>
+                        <div>
+                            <h4 class="font-black text-slate-900 leading-tight">KUMAR gaurav</h4><span
+                                class="px-2 py-0.5 bg-brand-50 text-brand-600 text-[10px] font-black uppercase rounded-md">Reg.
+                                Support</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 text-brand-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                            class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                            data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                            class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 font-medium leading-relaxed">Smooth registration process. They have deep
+                        knowledge of MCA rules and ensured my COI was received within 15 days.</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div
+                    class="bg-white p-5 rounded-xl border border-slate-100 space-y-6 flex flex-col hover:shadow-2xl transition-all duration-300 relative group">
+                    <div class="absolute top-5 right-8"><img
+                            src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                            alt="Google" class="h-4"></div>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-black text-lg">
+                            P</div>
+                        <div>
+                            <h4 class="font-black text-slate-900 leading-tight">Priya Sharma</h4><span
+                                class="px-2 py-0.5 bg-brand-50 text-brand-600 text-[10px] font-black uppercase rounded-md">Pvt
+                                Ltd Reg</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 text-brand-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                            class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                            data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                            class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 font-medium leading-relaxed">Excellent service for Pvt Ltd registration.
+                        They handled everything from DSC to COI seamlessly. Highly recommended for startups!</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div
+                    class="bg-white p-5 rounded-xl border border-slate-100 space-y-6 flex flex-col hover:shadow-2xl transition-all duration-300 relative group">
+                    <div class="absolute top-5 right-8"><img
+                            src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                            alt="Google" class="h-4"></div>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-black text-lg">
+                            A</div>
+                        <div>
+                            <h4 class="font-black text-slate-900 leading-tight">Amit Verma</h4><span
+                                class="px-2 py-0.5 bg-brand-50 text-brand-600 text-[10px] font-black uppercase rounded-md">LLP
+                                Registration</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 text-brand-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                            class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i
+                            data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star"
+                            class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 font-medium leading-relaxed">Very professional team. Got our LLP registered
+                        in record time. Their post-registration compliance calendar is a lifesaver.</p>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="reviews.html"
+                    class="inline-block px-10 py-4 bg-white border-2 border-slate-100 text-slate-900 rounded-xl font-black hover:border-brand-600 hover:text-brand-600 transition-all group">View
+                    430+ More Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ FAQ ════════════ -->
+    <section class="py-24 bg-brand-50 border-y border-brand-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-slate-900">Registration FAQs</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button
+                        class="faq-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-lg">What is COI in business?</span>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-brand-600"></i>
+                    </button>
+                    <div class="faq-answer px-8">
+                        <p class="text-slate-600 pb-6 text-sm font-medium">COI stands for Certificate of Incorporation.
+                            It is the legal certificate issued by MCA proving your company is now a registered legal
+                            entity.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button
+                        class="faq-btn w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-lg">How long does it take for Pvt Ltd Reg?</span>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-brand-600"></i>
+                    </button>
+                    <div class="faq-answer px-8">
+                        <p class="text-slate-600 pb-6 text-sm font-medium">Normally, it takes 10-15 working days,
+                            depending on name approval and government processing speed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ FOOTER (Copied from index.html) ════════════ -->
+    <footer class="bg-white text-slate-600 pt-16 pb-8 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="space-y-6">
+                    <a href="#"
+                        class="flex items-center gap-2 group transition-transform hover:scale-105 active:scale-95">
+                        <img src="TAXATION-logo.png" alt="TAXATION LOGO"
+                            class="h-12 w-auto object-contain mix-blend-multiply drop-shadow-sm">
+                    </a>
+                    <p class="text-sm leading-relaxed text-slate-500 font-medium">
+                        Simplifying taxes for individuals and businesses across India. Professional, accurate, and 24/7
+                        available to address your financial constraints instantly.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://www.instagram.com/" target="_blank"
+                            class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center hover:bg-brand-600 transition-colors text-brand-600 hover:text-white shadow-sm hover:-translate-y-1">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank"
+                            class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center hover:bg-brand-600 transition-colors text-brand-600 hover:text-white shadow-sm hover:-translate-y-1">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/917495013592" target="_blank"
+                            class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center hover:bg-[#25D366] transition-colors text-brand-600 hover:text-white shadow-sm hover:-translate-y-1">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@mytaxation" target="_blank"
+                            class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center hover:bg-[#FF0000] transition-colors text-brand-600 hover:text-white shadow-sm hover:-translate-y-1">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-sm font-black text-slate-900 mb-6 uppercase tracking-wider">Quick Links</h3>
+                    <ul class="space-y-4 text-sm font-bold text-slate-500">
+                        <li><a href="about.html"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> About Us</a></li>
+                        <li><a href="services.html"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> Our Services</a>
+                        </li>
+                        <li><a href="reviews.html"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> Testimonials</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-sm font-black text-slate-900 mb-6 uppercase tracking-wider">Our Services</h3>
+                    <ul class="space-y-4 text-sm font-bold text-slate-500">
+                        <li><a href="itr-filing.html" class="hover:text-brand-600 transition-colors">ITR Filing &
+                                Planning</a></li>
+                        <li><a href="gst-registration.html" class="hover:text-brand-600 transition-colors">GST
+                                Registration & Filing</a>
+                        </li>
+                        <li><a href="business-registration.html" class="hover:text-brand-600 transition-colors">Company
+                                Registration</a></li>
+                        <li><a href="bookkeeping.html" class="hover:text-brand-600 transition-colors">Bookkeeping &
+                                Accounting</a></li>
+                        <li><a href="loan-consultancy.html" class="hover:text-brand-600 transition-colors">Loan
+                                Consultancy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Map -->
+                <div>
+                    <h3 class="text-sm font-black text-slate-900 mb-6 uppercase tracking-wider">Contact Us</h3>
+                    <div class="space-y-4 text-sm font-bold text-slate-500">
+                        <p class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-500 shrink-0"></i>
+                            <span>Rz 364 B, Gali No 2<br>Raj Nagar, Part-2, Palam<br>Delhi, 110077</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-500 shrink-0"></i>
+                            <a href="tel:07495013592" class="hover:text-brand-600 transition-colors">074950 13592</a>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-500 shrink-0"></i>
+                            <a href="mailto:mytaxationonlychoice@gmail.com"
+                                class="hover:text-brand-600 transition-colors">mytaxationonlychoice@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div
+                class="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-slate-400">
+                <p>&copy; 2026 MY TAXATION. Built for India. All rights reserved.</p>
+                <p>Designed by <a href="https://webresolv.agency/"
+                        class="text-brand-600 hover:text-brand-700 font-black">Webresolv</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('.faq-icon');
+                faqButtons.forEach(otherBtn => {
+                    if (otherBtn !== button) {
+                        otherBtn.nextElementSibling.classList.remove('open');
+                        otherBtn.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                    }
+                });
+                if (answer.classList.contains('open')) {
+                    answer.classList.remove('open');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.classList.add('open');
+                    icon.style.transform = 'rotate(45deg)';
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

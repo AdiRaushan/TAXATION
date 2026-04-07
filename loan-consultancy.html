@@ -5,11 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loan Consultancy | MY TAXATION - Business & MSME Loans</title>
-    <meta name="description" content="Expert documentation support and consultancy for business and MSME loans in Delhi. Simplified application process with high approval rates.">
-    
+    <meta name="description"
+        content="Speak directly with tax and finance experts. Expert Loan Consultancy across India. We help with Project Reports and CMA Data.">
+    <meta name="keywords"
+        content="Business Loan India, MSME Loan India, CMA Data preparation, Top Finance Experts India">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mytaxation.in/loan-consultancy.html">
+    <meta property="og:title" content="MY TAXATION | Loan Consultancy in India">
+    <meta property="og:description"
+        content="Speak directly with top finance experts. Fast Loan processing in Delhi, India.">
+    <meta property="og:image" content="TAXATION-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mytaxation.in/loan-consultancy.html">
+    <meta property="twitter:title" content="MY TAXATION | Loan Consultancy in India">
+    <meta property="twitter:description"
+        content="Speak directly with top finance experts. Fast Loan processing in Delhi, India.">
+    <meta property="twitter:image" content="TAXATION-logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="TAXATION-logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -17,81 +40,1653 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
-                    colors: { brand: { 50: '#f0f7ff', 100: '#e0effe', 200: '#bae0fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#207ebe', 700: '#1d6bbd', 900: '#1e548a', 950: '#173354' } }
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#207ebe',
+                            700: '#1d6bbd',
+                            900: '#1e548a',
+                            950: '#173354',
+                        }
+                    }
                 }
             }
         }
     </script>
     <style>
-        :root { --brand-btn: #10b981; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; color: #0f172a; }
-        .loan-hero { background: linear-gradient(135deg, #059669 0%, #064e3b 100%); }
+        :root {
+            /* BRAND COLOR PALETTE */
+            --brand-green: #207ebe;
+            --brand-green-hover: #1d6bbd;
+            --brand-blue: #2563eb;
+            --brand-blue-hover: #1e40af;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+
+            /* MOBILE & DESK RESPONSIVE FONTS */
+            --h1-size: clamp(2.5rem, 8vw, 4.5rem);
+            --h2-size: clamp(2rem, 5vw, 3rem);
+            --h3-size: clamp(1.25rem, 3vw, 1.75rem);
+            --body-text: clamp(1rem, 2vw, 1.125rem);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .faq-answer {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .faq-answer.open {
+            max-height: 300px;
+            opacity: 1;
+            padding-top: 1rem;
+        }
+
+        .nav-transparent {
+            background: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-scrolled .nav-link {
+            color: #475569;
+        }
+
+        .nav-scrolled .logo-text {
+            color: var(--text-main);
+        }
+
+        .nav-scrolled .logo-accent {
+            color: var(--brand-green);
+        }
+
+        .service-icon-wrap {
+            transition: all 0.3s ease;
+        }
+
+        .group:hover .service-icon-wrap {
+            transform: scale(1.1) rotate(5deg);
+            background-color: var(--brand-green) !important;
+            color: white !important;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-right {
+            animation: fadeInRight 0.8s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(2deg);
+            }
+        }
+
+        @keyframes float_v2 {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            50% {
+                transform: translate(12px, -12px) rotate(-2deg);
+            }
+        }
+
+        @keyframes float_v3 {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-8px, -18px);
+            }
+        }
     </style>
 </head>
 
-<body class="antialiased">
-
+<body class="antialiased selection:bg-brand-500 selection:text-white">
     <!-- ════════════ NAVBAR ════════════ -->
-    <nav class="sticky top-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-3">
-            <a href="index.html" class="flex items-center gap-2">
-                <img src="TAXATION-logo.png" alt="LOGO" class="h-12 md:h-16 object-contain mix-blend-multiply">
-            </a>
-            <div class="hidden lg:flex items-center space-x-2 font-bold text-slate-600">
-                <a href="index.html" class="px-4 py-2 hover:text-brand-600 hover:bg-brand-50/50 rounded-xl transition-all">Home</a>
-                <a href="about.html" class="px-4 py-2 hover:text-brand-600 hover:bg-brand-50/50 rounded-xl transition-all">About</a>
-                <a href="contact.html" class="px-6 py-2.5 bg-[#10b981] text-white rounded-full font-bold text-sm shadow-xl active:scale-95 transition-all">Get Loan Help</a>
+    <nav id="navbar" class="sticky top-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center px-4 md:px-6 py-3">
+
+                <!-- Premium Logo -->
+                <a href="#" class="flex items-center gap-2 group transition-transform hover:scale-105 active:scale-95">
+                    <img src="TAXATION-logo.png" alt="TAXATION LOGO"
+                        class="h-12 md:h-16 w-auto object-contain mix-blend-multiply drop-shadow-sm">
+                </a>
+
+                <!-- Modern Dropdown Navigation (Desktop) -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html"
+                        class="px-4 py-2 text-sm font-bold text-brand-600 rounded-xl transition-all hover:bg-brand-50/50">Home</a>
+
+                    <div class="relative group">
+                        <button
+                            class="px-4 py-2 text-sm font-bold text-slate-600 hover:text-brand-600 rounded-xl transition-all hover:bg-brand-50/50 flex items-center gap-1.5 translate-z-0">
+                            Services <i data-lucide="chevron-down"
+                                class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <!-- Pure White Mega Menu -->
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4 z-50">
+                            <div
+                                class="w-[300px] bg-white rounded-xl p-3 shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-slate-100 overflow-hidden text-left">
+                                <div class="grid gap-1">
+                                    <a href="itr-filing.html"
+                                        class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-brand-50 transition-all group/item">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 group-hover/item:bg-brand-600 group-hover/item:text-white transition-all shadow-sm">
+                                            <i data-lucide="file-text" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-black text-slate-900">ITR Filing & Planning</p>
+                                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">
+                                                Income Tax Returns</p>
+                                        </div>
+                                    </a>
+                                    <a href="gst-registration.html"
+                                        class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-blue-50 transition-all group/item">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all shadow-sm">
+                                            <i data-lucide="calculator" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-black text-slate-900">GST Registration</p>
+                                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">
+                                                Filing & Compliance</p>
+                                        </div>
+                                    </a>
+                                    <a href="bookkeeping.html"
+                                        class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-orange-50 transition-all group/item">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center text-orange-600 group-hover/item:bg-orange-600 group-hover/item:text-white transition-all shadow-sm">
+                                            <i data-lucide="book-open" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-black text-slate-900">Bookkeeping & Accounting</p>
+                                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">
+                                                Financial MIS</p>
+                                        </div>
+                                    </a>
+                                    <a href="business-registration.html"
+                                        class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-emerald-50 transition-all group/item">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all shadow-sm">
+                                            <i data-lucide="briefcase" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-black text-slate-900">Business Registration</p>
+                                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">Pvt
+                                                Ltd, LLP, NGO</p>
+                                        </div>
+                                    </a>
+                                    <a href="loan-consultancy.html"
+                                        class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-indigo-50 transition-all group/item">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-all shadow-sm">
+                                            <i data-lucide="landmark" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-black text-slate-900">Loan Consultancy</p>
+                                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">
+                                                CMA Data & MSME Loans</p>
+                                        </div>
+                                    </a>
+                                    <a href="notice-help.html"
+                                        class="flex items-center gap-3.5 p-3.5 rounded-xl hover:bg-rose-50 transition-all group/item">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center text-rose-600 group-hover/item:bg-rose-600 group-hover/item:text-white transition-all shadow-sm">
+                                            <i data-lucide="alert-circle" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-black text-slate-900">Notice Help</p>
+                                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">IT
+                                                Notice Replies</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="about.html"
+                        class="px-3 py-2 text-sm font-bold text-slate-600 hover:text-brand-600 rounded-xl transition-all hover:bg-brand-50/50">About
+                        Us</a>
+                    <a href="reviews.html"
+                        class="px-3 py-2 text-sm font-bold text-slate-600 hover:text-brand-600 rounded-xl transition-all hover:bg-brand-50/50">Reviews</a>
+                    <a href="contact.html"
+                        class="px-3 py-2 text-sm font-bold text-slate-600 hover:text-brand-600 rounded-xl transition-all hover:bg-brand-50/50">Contact
+                        Us</a>
+                </div>
+
+                <!-- WhatsApp & Menu -->
+                <div class="flex items-center gap-2 md:gap-3">
+                    <!-- WhatsApp CTA (Nice & Minimal) -->
+                    <a href="https://wa.me/917495013592" target="_blank"
+                        class="group flex items-center gap-1.5 md:gap-2.5 px-3 md:px-6 py-2 md:py-2.5 bg-green-50 text-[#25D366] border border-[#25D366]/20 rounded-full font-bold text-sm md:text-base hover:bg-[#25D366] hover:text-white transition-all duration-300 shadow-sm active:scale-95">
+                        <svg viewBox="0 0 24 24" fill="currentColor"
+                            class="w-4 h-4 md:w-5 md:h-5 transition-colors duration-300">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                        </svg>
+                        <span>07495013592</span>
+                    </a>
+
+                    <!-- Mobile Hamburger -->
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+                        class="lg:hidden p-2 text-slate-600 hover:bg-slate-50 rounded-xl transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Drawer (Hidden by default) -->
+            <div id="mobile-menu"
+                class="hidden lg:hidden mt-2 bg-white rounded-xl p-4 border border-slate-100 shadow-2xl animate-fade-in-up">
+                <div class="grid gap-2">
+                    <a href="index.html"
+                        class="px-4 py-3 text-sm font-bold text-brand-600 hover:bg-brand-50 rounded-xl transition-all">Home</a>
+                    <details class="group">
+                        <summary
+                            class="flex items-center justify-between px-4 py-3 text-sm font-bold text-slate-600 hover:bg-brand-50 hover:text-brand-600 rounded-xl transition-all cursor-pointer list-none">
+                            Services <i data-lucide="chevron-down"
+                                class="w-4 h-4 group-open:rotate-180 transition-transform"></i>
+                        </summary>
+                        <div class="grid gap-1 mt-1 pl-4">
+                            <a href="itr-filing.html"
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-brand-600">ITR
+                                Filing</a>
+                            <a href="gst-registration.html"
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-blue-600">GST
+                                Registration</a>
+                            <a href="bookkeeping.html"
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-orange-600">Bookkeeping &
+                                Accounting</a>
+                            <a href="business-registration.html"
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-emerald-600">Business
+                                Registration</a>
+                            <a href="loan-consultancy.html"
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-indigo-600">Loan
+                                Consultancy</a>
+                            <a href="notice-help.html"
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-rose-600">Notice
+                                Help</a>
+                        </div>
+                    </details>
+                    <a href="about.html"
+                        class="px-4 py-3 text-sm font-bold text-slate-600 hover:bg-brand-50 hover:text-brand-600 rounded-xl transition-all">About
+                        Us</a>
+                    <a href="reviews.html"
+                        class="px-4 py-3 text-sm font-bold text-slate-600 hover:bg-brand-50 hover:text-brand-600 rounded-xl transition-all">Reviews</a>
+                    <a href="contact.html"
+                        class="px-4 py-3 text-sm font-bold text-slate-600 hover:bg-brand-50 hover:text-brand-600 rounded-xl transition-all">Contact
+                        Us</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- ════════════ LOAN HERO ════════════ -->
-    <section class="loan-hero py-24 text-white relative overflow-hidden font-sans">
-        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-            <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white text-xs font-black uppercase tracking-widest leading-none border border-white/20 mb-8">Business Financing Experts</div>
-            <h1 class="text-5xl md:text-7xl font-black leading-tight mb-8">Fuel Your Growth <br><span class="text-green-300">With Expert Loans</span></h1>
-            <p class="text-xl text-green-100 max-w-2xl mx-auto leading-relaxed mb-12">We provide end-to-end documentation support and consultancy for MSME, Business, and Project loans to ensure maximum approval rates.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/917495013592" class="px-12 py-5 bg-white text-slate-900 rounded-3xl font-black text-lg hover:scale-105 active:scale-95 transition-all shadow-2xl">WhatsApp Specialist</a>
-                <a href="tel:07495013592" class="px-12 py-5 bg-green-500 text-white border-2 border-green-400/30 rounded-3xl font-black text-lg hover:scale-105 active:scale-95 transition-all shadow-2xl">Request Callback</a>
+
+
+    <!-- ════════════ HERO ════════════ -->
+    <section class="relative min-h-[85vh] flex items-center pt-8 pb-16 overflow-hidden bg-white">
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-50/60 rounded-full blur-[100px] -z-10 pointer-events-none translate-x-[30%] -translate-y-[20%]">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-50/50 rounded-full blur-[90px] -z-10 pointer-events-none -translate-x-[20%] translate-y-[20%]">
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+
+                <div class="relative z-20 space-y-8 animate-fade-in-up">
+                    <div>
+                        <span
+                            class="flex w-full md:w-auto md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-sm font-bold tracking-wide mb-6">
+                            <i data-lucide="shield-check" class="w-4 h-4"></i> Get the right loan, faster — with expert
+                            help
+                        </span>
+                        <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight mb-6">
+                            Funding for <br class="hidden lg:block" />
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-400">Scale
+                                & Dreams</span>
+                        </h1>
+                        <p class="text-lg text-slate-500 max-w-lg leading-relaxed font-medium">
+                            We help salaried individuals, self-employed professionals, and businesses secure Mudra,
+                            home, business, and LAP loans with end-to-end documentation support and bank liaison.
+                        </p>
+                    </div>
+
+                    <!-- Hero Stats -->
+                    <div class="grid grid-cols-3 gap-6 py-4 border-y border-slate-100">
+                        <div>
+                            <p class="text-3xl font-black text-brand-600 leading-tight">₹50L+</p>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest mt-1">Disbursed
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-black text-brand-600 leading-tight">15+</p>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest mt-1">Partners</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-black text-brand-600 leading-tight">3–7</p>
+                            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest mt-1">Day
+                                Approvals</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="tel:07495013592"
+                            class="px-8 py-4 bg-brand-600 text-white rounded-xl font-black text-center shadow-[0_10px_30px_rgba(32,126,190,0.3)] hover:-translate-y-1 hover:bg-brand-700 transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="phone-call" class="w-5 h-5"></i> Book Consultation
+                        </a>
+                        <a href="https://wa.me/917495013592" target="_blank"
+                            class="px-8 py-4 bg-[#25D366] text-white rounded-xl font-black text-center shadow-[0_10px_30px_rgba(37,211,102,0.3)] hover:-translate-y-1 hover:bg-[#128C7E] transition-all flex items-center justify-center gap-2">
+                            WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side Interactive Visual -->
+                <div class="relative hidden lg:block animate-fade-in-right">
+                    <div class="absolute -inset-4 bg-brand-600/5 blur-3xl rounded-full"></div>
+                    <div class="relative bg-white p-8 rounded-[40px] shadow-2xl border border-slate-100">
+                        <div class="space-y-6">
+                            <div
+                                class="flex items-center justify-between p-4 bg-brand-50 rounded-2xl border border-brand-100">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-10 bg-brand-600 text-white rounded-xl flex items-center justify-center shadow-lg shadow-brand-200">
+                                        <i data-lucide="home" class="w-5 h-5"></i></div>
+                                    <span class="font-black text-slate-900">Home Loan</span>
+                                </div>
+                                <span class="text-brand-600 font-black">8.35%*</span>
+                            </div>
+                            <div
+                                class="flex items-center justify-between p-4 bg-brand-50 rounded-2xl border border-brand-100">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-10 bg-brand-600 text-white rounded-xl flex items-center justify-center shadow-lg shadow-brand-200">
+                                        <i data-lucide="briefcase" class="w-5 h-5"></i></div>
+                                    <span class="font-black text-slate-900">Business Loan</span>
+                                </div>
+                                <span class="text-brand-600 font-black">10%*</span>
+                            </div>
+                            <div
+                                class="flex items-center justify-between p-4 bg-brand-50 rounded-2xl border border-brand-100">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-10 bg-brand-600 text-white rounded-xl flex items-center justify-center shadow-lg shadow-brand-200">
+                                        <i data-lucide="trending-up" class="w-5 h-5"></i></div>
+                                    <span class="font-black text-slate-900">Mudra Loan</span>
+                                </div>
+                                <span class="text-brand-600 font-black">7%*</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ════════════ LOAN TYPES ════════════ -->
-    <section class="py-24 bg-slate-50">
+    <!-- ════════════ SECTION 1 — LOAN TYPES ════════════ -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-8 rounded-[40px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 group">
-                    <div class="w-16 h-16 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-green-600 group-hover:text-white transition-all"><i data-lucide="briefcase" class="w-8 h-8"></i></div>
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span
+                    class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-50 text-brand-600 text-xs font-black rounded-full border border-brand-100 uppercase tracking-widest">
+                    Tailored Lending
+                </span>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+                    Which loan do <br><span class="text-brand-600">you need?</span>
+                </h2>
+                <p class="text-slate-500 font-bold">Compare all four loan types we assist with — amounts, rates, tenure,
+                    and who it's for.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Mudra -->
+                <div
+                    class="bg-white p-6 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div
+                        class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i data-lucide="building-2" class="w-5 h-5"></i></div>
+                    <h3 class="text-xl font-black text-slate-900 mb-2">Mudra Loan</h3>
+                    <p class="text-xs text-slate-400 font-bold mb-6">For micro & small businesses</p>
+                    <div class="space-y-4 border-t border-slate-50 pt-6">
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Amount</span><span
+                                class="text-sm font-black text-slate-900">Up to ₹20L</span></div>
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Rate</span><span
+                                class="text-sm font-black text-slate-900">7% – 12%</span></div>
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Tenure</span><span
+                                class="text-sm font-black text-slate-900">5 Yrs</span></div>
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Collateral</span><span
+                                class="text-sm font-black text-slate-900">Not Required</span></div>
+                    </div>
+                </div>
+
+                <!-- Home -->
+                <div
+                    class="bg-white p-6 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div
+                        class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i data-lucide="home" class="w-5 h-5"></i></div>
+                    <h3 class="text-xl font-black text-slate-900 mb-2">Home Loan</h3>
+                    <p class="text-xs text-slate-400 font-bold mb-6">For purchase or renovation</p>
+                    <div class="space-y-4 border-t border-slate-50 pt-6">
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Amount</span><span
+                                class="text-sm font-black text-slate-900">Up to ₹10Cr+</span></div>
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Rate</span><span
+                                class="text-sm font-black text-slate-900">8.35% – 11%</span></div>
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Tenure</span><span
+                                class="text-sm font-black text-slate-900">30 Yrs</span></div>
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Tax Benefit</span><span
+                                class="text-sm font-black text-slate-900">Sec 24 + 80C</span></div>
+                    </div>
+                </div>
+
+                <!-- Business -->
+                <div
+                    class="bg-white p-6 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div
+                        class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i data-lucide="briefcase" class="w-5 h-5"></i></div>
                     <h3 class="text-xl font-black text-slate-900 mb-2">Business Loan</h3>
-                    <p class="text-slate-500 font-bold leading-relaxed">Collateral-free funding for your business expansion and working capital needs.</p>
+                    <p class="text-xs text-slate-400 font-bold mb-6">Working capital & expansion</p>
+                    <div class="space-y-4 border-t border-slate-50 pt-6">
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Amount</span><span
+                                class="text-sm font-black text-slate-900">Up to ₹2Cr</span></div>
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Rate</span><span
+                                class="text-sm font-black text-slate-900">10% – 18%</span></div>
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Tenure</span><span
+                                class="text-sm font-black text-slate-900">7 Yrs</span></div>
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Collateral</span><span
+                                class="text-sm font-black text-slate-900">Flexible</span></div>
+                    </div>
                 </div>
-                <div class="p-8 rounded-[40px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 group">
-                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-all"><i data-lucide="factory" class="w-8 h-8"></i></div>
-                    <h3 class="text-xl font-black text-slate-900 mb-2">MSME Loan</h3>
-                    <p class="text-slate-500 font-bold leading-relaxed">Specialized funding programs for micro, small, and medium enterprises at subsidized rates.</p>
-                </div>
-                <div class="p-8 rounded-[40px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 group">
-                    <div class="w-16 h-16 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-amber-600 group-hover:text-white transition-all"><i data-lucide="home" class="w-8 h-8"></i></div>
-                    <h3 class="text-xl font-black text-slate-900 mb-2">Mortgage Loan</h3>
-                    <p class="text-slate-500 font-bold leading-relaxed">Get the highest value against your property with our expert-prepared project reports.</p>
-                </div>
-                <div class="p-8 rounded-[40px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 group">
-                    <div class="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:bg-indigo-600 group-hover:text-white transition-all"><i data-lucide="layout" class="w-8 h-8"></i></div>
-                    <h3 class="text-xl font-black text-slate-900 mb-2">Project Loan</h3>
-                    <p class="text-slate-500 font-bold leading-relaxed">Complete consultancy for new project funding and CMA data preparation for bank approvals.</p>
+
+                <!-- LAP -->
+                <div
+                    class="bg-white p-6 rounded-[32px] border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all group">
+                    <div
+                        class="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-all">
+                        <i data-lucide="key" class="w-5 h-5"></i></div>
+                    <h3 class="text-xl font-black text-slate-900 mb-2">LAP</h3>
+                    <p class="text-xs text-slate-400 font-bold mb-6">Loan Against Property</p>
+                    <div class="space-y-4 border-t border-slate-50 pt-6">
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Amount</span><span
+                                class="text-sm font-black text-slate-900">70% LTV</span></div>
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Rate</span><span
+                                class="text-sm font-black text-slate-900">9% – 13%</span></div>
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Tenure</span><span
+                                class="text-sm font-black text-slate-900">15 Yrs</span></div>
+                        <div class="flex justify-between items-center"><span
+                                class="text-[10px] font-black text-slate-400 uppercase">Use</span><span
+                                class="text-sm font-black text-slate-900">Any Purpose</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ═════════ FOOTER ═════════ -->
-    <footer class="bg-white py-12 border-t border-slate-100 text-center">
-        <p class="text-sm font-black text-slate-400 uppercase tracking-widest">&copy; 2026 MY TAXATION. Financing Delhi's Future.</p>
-    </footer>
+    <!-- ════════════ SECTION 2 — GOVERNMENT SCHEMES ════════════ -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-600 text-xs font-black uppercase tracking-[0.3em]">Institutional Support</span>
+                <h2 class="text-4xl font-black text-slate-900 mt-4 tracking-tight">Current Government <br><span
+                        class="text-brand-600">Loan Schemes</span></h2>
+                <p class="text-slate-500 font-bold mt-4">Active central government schemes we help you apply under —
+                    with subsidy, guarantee, and interest benefits.</p>
+            </div>
 
-    <script>lucide.createIcons();</script>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- PM Mudra -->
+                <div class="p-8 rounded-[40px] bg-brand-50 border border-brand-100 relative group overflow-hidden">
+                    <div class="flex justify-between items-start mb-6">
+                        <div
+                            class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-brand-600 shadow-sm">
+                            <i data-lucide="landmark" class="w-6 h-6"></i></div>
+                        <span class="px-3 py-1 bg-brand-600 text-white text-[10px] font-black uppercase rounded-lg">Most
+                            Used</span>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900 mb-2">PM Mudra Yojana (PMMY)</h3>
+                    <p class="text-xs text-slate-400 font-bold mb-6">Ministry of Finance</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs"><span
+                                class="text-slate-500 font-bold">Amount</span><span class="font-black text-slate-900">Up
+                                to ₹20L</span></div>
+                        <div class="flex justify-between text-xs"><span class="text-slate-500 font-bold">For</span><span
+                                class="font-black text-slate-900 text-right">Non-farm Micro Enterprises</span></div>
+                        <div class="flex justify-between text-xs"><span
+                                class="text-slate-500 font-bold">Collateral</span><span
+                                class="font-black text-slate-900 text-right">Nil</span></div>
+                    </div>
+                </div>
+
+                <!-- PMAY -->
+                <div
+                    class="p-8 rounded-[40px] bg-white border border-slate-100 shadow-sm relative group overflow-hidden">
+                    <div class="flex justify-between items-start mb-6">
+                        <div
+                            class="w-12 h-12 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center shadow-sm">
+                            <i data-lucide="home" class="w-6 h-6"></i></div>
+                        <span
+                            class="px-3 py-1 bg-slate-100 text-slate-400 text-[10px] font-black uppercase rounded-lg">Active</span>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900 mb-2">PMAY — Credit Subsidy</h3>
+                    <p class="text-xs text-slate-400 font-bold mb-6">Ministry of Housing & Urban Affairs</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs"><span
+                                class="text-slate-500 font-bold">Subsidy</span><span
+                                class="font-black text-slate-900">Up to ₹2.67L</span></div>
+                        <div class="flex justify-between text-xs"><span class="text-slate-500 font-bold">For</span><span
+                                class="font-black text-slate-900 text-right">EWS / LIG / MIG Buyers</span></div>
+                        <div class="flex justify-between text-xs"><span class="text-slate-500 font-bold">Income
+                                Limit</span><span class="font-black text-slate-900 text-right">Up to ₹18L p.a.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CGTMSE -->
+                <div
+                    class="p-8 rounded-[40px] bg-white border border-slate-100 shadow-sm relative group overflow-hidden">
+                    <div class="flex justify-between items-start mb-6">
+                        <div
+                            class="w-12 h-12 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center shadow-sm">
+                            <i data-lucide="shield" class="w-6 h-6"></i></div>
+                        <span
+                            class="px-3 py-1 bg-slate-100 text-slate-400 text-[10px] font-black uppercase rounded-lg">Active</span>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900 mb-2">CGTMSE Guarantee</h3>
+                    <p class="text-xs text-slate-400 font-bold mb-6">MSME Ministry + SIDBI</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs"><span
+                                class="text-slate-500 font-bold">Coverage</span><span
+                                class="font-black text-slate-900">Up to ₹5Cr</span></div>
+                        <div class="flex justify-between text-xs"><span class="text-slate-500 font-bold">For</span><span
+                                class="font-black text-slate-900 text-right">MSMEs — No Collateral</span></div>
+                        <div class="flex justify-between text-xs"><span
+                                class="text-slate-500 font-bold">Guarantee</span><span
+                                class="font-black text-slate-900 text-right">75–85% of Loan</span></div>
+                    </div>
+                </div>
+
+                <!-- Stand-Up India -->
+                <div
+                    class="p-8 rounded-[40px] bg-white border border-slate-100 shadow-sm relative group overflow-hidden">
+                    <div class="flex justify-between items-start mb-6">
+                        <div
+                            class="w-12 h-12 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center shadow-sm">
+                            <i data-lucide="users" class="w-6 h-6"></i></div>
+                        <span
+                            class="px-3 py-1 bg-slate-100 text-slate-400 text-[10px] font-black uppercase rounded-lg">Active</span>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900 mb-2">Stand-Up India</h3>
+                    <p class="text-xs text-slate-400 font-bold mb-6">Ministry of Finance</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs"><span
+                                class="text-slate-500 font-bold">Amount</span><span
+                                class="font-black text-slate-900">₹10L – ₹1Cr</span></div>
+                        <div class="flex justify-between text-xs"><span class="text-slate-500 font-bold">For</span><span
+                                class="font-black text-slate-900 text-right">SC / ST / Women</span></div>
+                        <div class="flex justify-between text-xs"><span
+                                class="text-slate-500 font-bold">Tenure</span><span
+                                class="font-black text-slate-900 text-right">Up to 7 Yrs</span></div>
+                    </div>
+                </div>
+
+                <!-- PM SVANidhi -->
+                <div
+                    class="p-8 rounded-[40px] bg-white border border-slate-100 shadow-sm relative group overflow-hidden">
+                    <div class="flex justify-between items-start mb-6">
+                        <div
+                            class="w-12 h-12 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center shadow-sm">
+                            <i data-lucide="truck" class="w-6 h-6"></i></div>
+                        <span
+                            class="px-3 py-1 bg-slate-100 text-slate-400 text-[10px] font-black uppercase rounded-lg">Active</span>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900 mb-2">PM SVANidhi</h3>
+                    <p class="text-xs text-slate-400 font-bold mb-6">Ministry of Housing & Urban Affairs</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs"><span
+                                class="text-slate-500 font-bold">Amount</span><span class="font-black text-slate-900">Up
+                                to ₹50K</span></div>
+                        <div class="flex justify-between text-xs"><span class="text-slate-500 font-bold">For</span><span
+                                class="font-black text-slate-900 text-right">Street Vendors</span></div>
+                        <div class="flex justify-between text-xs"><span
+                                class="text-slate-500 font-bold">Subsidy</span><span
+                                class="font-black text-slate-900 text-right">7% Interest Sub.</span></div>
+                    </div>
+                </div>
+
+                <!-- PMEGP -->
+                <div
+                    class="p-8 rounded-[40px] bg-white border border-slate-100 shadow-sm relative group overflow-hidden">
+                    <div class="flex justify-between items-start mb-6">
+                        <div
+                            class="w-12 h-12 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center shadow-sm">
+                            <i data-lucide="rocket" class="w-6 h-6"></i></div>
+                        <span
+                            class="px-3 py-1 bg-slate-100 text-slate-400 text-[10px] font-black uppercase rounded-lg">Active</span>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900 mb-2">PMEGP</h3>
+                    <p class="text-xs text-slate-400 font-bold mb-6">MSME Ministry / KVIC</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between text-xs"><span
+                                class="text-slate-500 font-bold">Subsidy</span><span
+                                class="font-black text-slate-900">15–35% of Cost</span></div>
+                        <div class="flex justify-between text-xs"><span class="text-slate-500 font-bold">Max
+                                Project</span><span class="font-black text-slate-900 text-right">₹50L (Mfg) / ₹20L
+                                (Svc)</span></div>
+                        <div class="flex justify-between text-xs"><span class="text-slate-500 font-bold">For</span><span
+                                class="font-black text-slate-900 text-right">New Startups</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ SECTION 3 — ELIGIBILITY CRITERIA ════════════ -->
+    <section class="py-24 bg-slate-50 border-y border-slate-100 overflow-x-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-slate-900 tracking-tight">Eligibility <span
+                        class="text-brand-600">at a glance</span></h2>
+                <p class="text-slate-500 font-bold mt-4">Key parameters banks check — CIBIL score, income, age, and ITR
+                    requirement per loan type.</p>
+            </div>
+
+            <div class="bg-white rounded-[40px] shadow-xl border border-slate-100 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="bg-brand-600 text-white uppercase text-[10px] font-black tracking-widest">
+                                <th class="px-8 py-6">Parameter</th>
+                                <th class="px-8 py-6">Mudra</th>
+                                <th class="px-8 py-6">Home Loan</th>
+                                <th class="px-8 py-6">Business</th>
+                                <th class="px-8 py-6">LAP</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm font-bold text-slate-600 divide-y divide-slate-50">
+                            <tr>
+                                <td class="px-8 py-6 bg-slate-50/50">CIBIL Score</td>
+                                <td class="px-8 py-6">650+</td>
+                                <td class="px-8 py-6">700+</td>
+                                <td class="px-8 py-6">700+</td>
+                                <td class="px-8 py-6">675+</td>
+                            </tr>
+                            <tr>
+                                <td class="px-8 py-6 bg-slate-50/50">Age Range</td>
+                                <td class="px-8 py-6">18 – 65 Yrs</td>
+                                <td class="px-8 py-6">21 – 70 Yrs</td>
+                                <td class="px-8 py-6">21 – 65 Yrs</td>
+                                <td class="px-8 py-6">21 – 70 Yrs</td>
+                            </tr>
+                            <tr>
+                                <td class="px-8 py-6 bg-slate-50/50">Min. Income / T.O.</td>
+                                <td class="px-8 py-6">No Min.</td>
+                                <td class="px-8 py-6">₹25K/Mo</td>
+                                <td class="px-8 py-6">₹40L P.A.</td>
+                                <td class="px-8 py-6">₹3L P.A.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-8 py-6 bg-slate-50/50">ITR Required</td>
+                                <td class="px-8 py-6">Not Mandatory</td>
+                                <td class="px-8 py-6">2 Years</td>
+                                <td class="px-8 py-6">3 Years</td>
+                                <td class="px-8 py-6">2 Years</td>
+                            </tr>
+                            <tr>
+                                <td class="px-8 py-6 bg-slate-50/50">Business Vintage</td>
+                                <td class="px-8 py-6">New OK</td>
+                                <td class="px-8 py-6">N/A</td>
+                                <td class="px-8 py-6">2+ Years</td>
+                                <td class="px-8 py-6">1+ Year</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ SECTION 4 — DOCUMENTS CHECKLIST ════════════ -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-600 text-[10px] font-black uppercase tracking-[0.4em]">Preparation</span>
+                <h2 class="text-4xl font-black text-slate-900 mt-4 tracking-tight">Documents <span
+                        class="text-brand-600">Needed</span></h2>
+                <p class="text-slate-500 font-bold mt-4">Organised by loan type — we help you collect and prepare every
+                    document.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Mudra -->
+                <div
+                    class="p-8 rounded-[40px] bg-slate-50 border border-slate-100 shadow-sm transition-all hover:bg-white hover:shadow-xl group">
+                    <h3 class="text-xl font-black text-slate-900 mb-6 flex items-center gap-2">
+                        <i data-lucide="folder-check" class="w-5 h-5 text-brand-600"></i> Mudra
+                    </h3>
+                    <ul class="space-y-4 text-xs font-bold text-slate-500">
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> Aadhaar + PAN Card</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> Business Proof (Udyam)</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> Last 6M Bank Statements</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> Quotation for Machinery</li>
+                    </ul>
+                </div>
+
+                <!-- Home Loan -->
+                <div
+                    class="p-8 rounded-[40px] bg-slate-50 border border-slate-100 shadow-sm transition-all hover:bg-white hover:shadow-xl group">
+                    <h3 class="text-xl font-black text-slate-900 mb-6 flex items-center gap-2">
+                        <i data-lucide="home" class="w-5 h-5 text-brand-600"></i> Home Loan
+                    </h3>
+                    <ul class="space-y-4 text-xs font-bold text-slate-500">
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> Form 16 / Sal. Slips</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> Property Sale Deed</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> NOC from Builder</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> Processing Fee Cheque</li>
+                    </ul>
+                </div>
+
+                <!-- Business Loan -->
+                <div
+                    class="p-8 rounded-[40px] bg-slate-50 border border-slate-100 shadow-sm transition-all hover:bg-white hover:shadow-xl group">
+                    <h3 class="text-xl font-black text-slate-900 mb-6 flex items-center gap-2">
+                        <i data-lucide="briefcase" class="w-5 h-5 text-brand-600"></i> Business
+                    </h3>
+                    <ul class="space-y-4 text-xs font-bold text-slate-500">
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> 3 Years Audited Balance Sheet</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> GST Returns (1 Year)</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> Partnership/MOA</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> CMA Data Report</li>
+                    </ul>
+                </div>
+
+                <!-- LAP -->
+                <div
+                    class="p-8 rounded-[40px] bg-slate-50 border border-slate-100 shadow-sm transition-all hover:bg-white hover:shadow-xl group">
+                    <h3 class="text-xl font-black text-slate-900 mb-6 flex items-center gap-2">
+                        <i data-lucide="key" class="w-5 h-5 text-brand-600"></i> LAP
+                    </h3>
+                    <ul class="space-y-4 text-xs font-bold text-slate-500">
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> Chain of Title Docs</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> Tax Receipts (Property)</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> Repayment Track Record</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-3 h-3 text-brand-600 mt-1"></i> Valuation Report (assisted)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ SECTION 5 — EMI CALCULATOR ════════════ -->
+    <section class="py-24 bg-brand-950 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-900/50 text-brand-200 text-xs font-black rounded-full border border-brand-800 uppercase tracking-widest">Calculators</span>
+                    <h2 class="text-4xl md:text-6xl font-black leading-tight tracking-tight">EMI & <span
+                            class="text-brand-400">Eligibility</span> Calculator</h2>
+                    <p class="text-lg text-brand-200/70 font-medium">Estimate your monthly EMI and total interest before
+                        applying. Plan your finances with precision.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-[40px] shadow-2xl border border-white/10 text-slate-900">
+                    <div class="space-y-8">
+                        <div>
+                            <div class="flex justify-between mb-4">
+                                <label class="text-sm font-black uppercase text-slate-400">Loan Amount</label>
+                                <span id="amount-val" class="font-black text-brand-600 text-xl">₹20L</span>
+                            </div>
+                            <input type="range" id="loan-amount" min="100000" max="10000000" step="100000"
+                                value="2000000"
+                                class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-brand-600">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-4">
+                                <label class="text-sm font-black uppercase text-slate-400">Interest Rate (%
+                                    p.a.)</label>
+                                <span id="rate-val" class="font-black text-brand-600 text-xl">9.00%</span>
+                            </div>
+                            <input type="range" id="interest-rate" min="5" max="25" step="0.25" value="9"
+                                class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-brand-600">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-4">
+                                <label class="text-sm font-black uppercase text-slate-400">Tenure (Years)</label>
+                                <span id="tenure-val" class="font-black text-brand-600 text-xl">10 yrs</span>
+                            </div>
+                            <input type="range" id="loan-tenure" min="1" max="30" step="1" value="10"
+                                class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-brand-600">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 pt-6 border-t border-slate-100 text-center">
+                            <div class="p-4 bg-brand-50 rounded-2xl">
+                                <p class="text-[10px] font-black text-slate-400 uppercase mb-1">Monthly EMI</p>
+                                <p id="monthly-emi" class="text-2xl font-black text-slate-900">₹25,335</p>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-2xl">
+                                <p class="text-[10px] font-black text-slate-400 uppercase mb-1">Total Interest</p>
+                                <p id="total-interest" class="text-2xl font-black text-slate-900">₹10.4L</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ SECTION 6 — DISBURSEMENT TIMELINE ════════════ -->
+    <section class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-slate-900 tracking-tight">How long <span class="text-brand-600">does
+                        it take?</span></h2>
+                <p class="text-slate-500 font-bold mt-4">Typical timeline from first consultation to money in your
+                    account.</p>
+            </div>
+
+            <div class="space-y-12 max-w-4xl mx-auto relative">
+                <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-[2px] bg-slate-100 -translate-x-1/2 -z-10">
+                </div>
+
+                <!-- Step 1 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center md:text-right">
+                    <div class="flex-1 hidden md:block">
+                        <p class="text-sm font-black text-slate-400 uppercase tracking-widest text-brand-600">Day 1</p>
+                    </div>
+                    <div
+                        class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center font-black shrink-0 shadow-xl shadow-brand-200">
+                        1</div>
+                    <div class="flex-1 bg-white p-6 rounded-3xl border border-slate-100 shadow-sm text-left">
+                        <h4 class="font-black text-slate-900 mb-2">Free Consultation & Eligibility Check</h4>
+                        <p class="text-sm text-slate-500 font-bold">We review your profile, CIBIL score, ITR, and income
+                            — recommend the best loan type and lender.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col md:flex-row-reverse gap-8 items-center md:text-left">
+                    <div class="flex-1 hidden md:block">
+                        <p class="text-sm font-black text-slate-400 uppercase tracking-widest text-brand-600">Day 1–3
+                        </p>
+                    </div>
+                    <div
+                        class="w-12 h-12 bg-white text-brand-600 border-2 border-brand-600 rounded-full flex items-center justify-center font-black shrink-0 relative z-10">
+                        2</div>
+                    <div class="flex-1 bg-white p-6 rounded-3xl border border-slate-100 shadow-sm text-right">
+                        <h4 class="font-black text-slate-900 mb-2">Document Collection & Preparation</h4>
+                        <p class="text-sm text-slate-500 font-bold">We send you a checklist, help organise KYC,
+                            financial docs, and prepare your application package.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center md:text-right">
+                    <div class="flex-1 hidden md:block">
+                        <p class="text-sm font-black text-slate-400 uppercase tracking-widest text-brand-600">Day 3–5
+                        </p>
+                    </div>
+                    <div
+                        class="w-12 h-12 bg-white text-brand-600 border-2 border-brand-600 rounded-full flex items-center justify-center font-black shrink-0 relative z-10">
+                        3</div>
+                    <div class="flex-1 bg-white p-6 rounded-3xl border border-slate-100 shadow-sm text-left">
+                        <h4 class="font-black text-slate-900 mb-2">Application Submission to Bank</h4>
+                        <p class="text-sm text-slate-500 font-bold">We submit to the right lender, follow up with the
+                            bank officer, and handle any initial queries.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex flex-col md:flex-row-reverse gap-8 items-center md:text-left">
+                    <div class="flex-1 hidden md:block">
+                        <p class="text-sm font-black text-slate-400 uppercase tracking-widest text-brand-600">Day 5–12
+                        </p>
+                    </div>
+                    <div
+                        class="w-12 h-12 bg-white text-brand-600 border-2 border-brand-600 rounded-full flex items-center justify-center font-black shrink-0 relative z-10">
+                        4</div>
+                    <div class="flex-1 bg-white p-6 rounded-3xl border border-slate-100 shadow-sm text-right">
+                        <h4 class="font-black text-slate-900 mb-2">Bank Processing & Verification</h4>
+                        <p class="text-sm text-slate-500 font-bold">Bank does credit appraisal, property valuation (for
+                            home/LAP), and field verification. We track progress daily.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center md:text-right">
+                    <div class="flex-1 hidden md:block text-emerald-600">
+                        <p class="text-sm font-black uppercase tracking-widest">Success</p>
+                    </div>
+                    <div
+                        class="w-12 h-12 bg-emerald-500 text-white rounded-full flex items-center justify-center font-black shrink-0 shadow-xl shadow-emerald-200">
+                        <i data-lucide="check" class="w-6 h-6"></i></div>
+                    <div class="flex-1 bg-emerald-50 p-6 rounded-3xl border border-emerald-100 shadow-sm text-left">
+                        <h4 class="font-black text-slate-900 mb-2 text-emerald-900">Sanction & Disbursement</h4>
+                        <p class="text-sm text-emerald-700 font-bold">Mudra loans: 3–7 days. Home/LAP: 15–21 days.
+                            Amount credited directly!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ SECTION 7 — BANK PARTNERS ════════════ -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-600 text-[10px] font-black uppercase tracking-[0.3em]">Network</span>
+                <h2 class="text-4xl font-black text-slate-900 mt-4 tracking-tight">Our Lending <span
+                        class="text-brand-600">Partners</span></h2>
+                <p class="text-slate-500 font-bold mt-4">We work with PSU banks, private banks, NBFCs, and MFIs to find
+                    you the best rate.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div
+                    class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm text-center flex flex-col items-center justify-center group hover:-translate-y-2 transition-all">
+                    <p class="font-black text-slate-900 mb-1">SBI</p>
+                    <p class="text-[9px] text-slate-400 font-black uppercase mb-3">PSU Bank</p>
+                    <p class="text-[10px] font-black text-brand-600">From 8.35%</p>
+                </div>
+                <div
+                    class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm text-center flex flex-col items-center justify-center group hover:-translate-y-2 transition-all">
+                    <p class="font-black text-slate-900 mb-1">BoB</p>
+                    <p class="text-[9px] text-slate-400 font-black uppercase mb-3">PSU Bank</p>
+                    <p class="text-[10px] font-black text-brand-600">Mudra / MSME</p>
+                </div>
+                <div
+                    class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm text-center flex flex-col items-center justify-center group hover:-translate-y-2 transition-all">
+                    <p class="font-black text-slate-900 mb-1">HDFC</p>
+                    <p class="text-[9px] text-slate-400 font-black uppercase mb-3">Private Bank</p>
+                    <p class="text-[10px] font-black text-brand-600">From 10.5%</p>
+                </div>
+                <div
+                    class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm text-center flex flex-col items-center justify-center group hover:-translate-y-2 transition-all">
+                    <p class="font-black text-slate-900 mb-1">ICICI</p>
+                    <p class="text-[9px] text-slate-400 font-black uppercase mb-3">Private Bank</p>
+                    <p class="text-[10px] font-black text-brand-600">LAP From 9.2%</p>
+                </div>
+                <div
+                    class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm text-center flex flex-col items-center justify-center group hover:-translate-y-2 transition-all">
+                    <p class="font-black text-slate-900 mb-1">BAJAJ</p>
+                    <p class="text-[9px] text-slate-400 font-black uppercase mb-3">NBFC (Fast)</p>
+                    <p class="text-[10px] font-black text-brand-600">Business Loans</p>
+                </div>
+                <div
+                    class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm text-center flex flex-col items-center justify-center group hover:-translate-y-2 transition-all">
+                    <p class="font-black text-slate-900 mb-1">Ugro Cap</p>
+                    <p class="text-[9px] text-slate-400 font-black uppercase mb-3">MSME Focus</p>
+                    <p class="text-[10px] font-black text-brand-600">MSME & Mudra</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ GST IMPORTANCE & PROBLEMS SOLVED ════════════ -->
+    <section class="py-16 lg:py-20 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Why GST Compliance Is Important -->
+                <div
+                    class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-rose-600 mb-6">
+                        <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900 mb-4">Why Professional Pitching <br>Is Important</h3>
+                    <p class="text-slate-600 font-medium leading-relaxed">
+                        A poorly drafted CMA or project report can instantly result in application rejection. Banks
+                        require specific ratios, justified projections, and clear intent. A professionally drafted file
+                        maximizes your chances of high quantum and low interest rates.
+                    </p>
+                </div>
+
+                <!-- Returns We File For You -->
+                <div
+                    class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600 mb-6">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900 mb-4">Loans We Facilitate <br>For You</h3>
+                    <p class="text-slate-600 font-medium leading-relaxed">
+                        We consult on all major funding requirements including MSME / CGTMSE Loans, Working Capital
+                        (CC/OD), Term Loans for machinery, Project Finance for new ventures, and Loan Against Property
+                        (LAP).
+                    </p>
+                </div>
+
+                <!-- Struggling With GST? We’ve Got You Covered -->
+                <div
+                    class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-amber-600 mb-6">
+                        <i data-lucide="life-buoy" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900 mb-4">Facing Loan Rejections? <br>We’ve Got You</h3>
+                    <p class="text-slate-600 font-medium leading-relaxed">
+                        Many businesses face issues like poor CIBIL mismatch, unrealistic projections, or lack of
+                        collateral structure. We step in to analyze your existing file, restructure your financials, and
+                        reposition you perfectly in front of banks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ REVIEWS ════════════ -->
+    <section class="py-16 lg:py-20 bg-slate-50 relative overflow-hidden border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-5 mb-16 pb-12">
+                <div class="space-y-4">
+                    <span class="text-brand-600 text-[10px] font-black uppercase tracking-[0.4em]">Testimonials</span>
+                    <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">Voices of
+                        <br /> Excellence</h2>
+                    <p class="text-slate-500 font-medium text-lg max-w-xl">Reliable feedback from entrepreneurs who
+                        secured their dream funding through our expert consultancy.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <div
+                    class="bg-white p-5 rounded-xl border border-slate-100 space-y-6 flex flex-col hover:shadow-2xl transition-all duration-300 relative group">
+                    <div class="absolute top-5 right-8">
+                        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                            alt="Google" class="h-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-black text-lg">
+                            P</div>
+                        <div>
+                            <h4 class="font-black text-slate-900">Prakash Verma</h4>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="px-2 py-0.5 bg-brand-50 text-brand-600 text-[10px] font-black uppercase rounded-md">MSME
+                                    Loan</span>
+                                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">1 review · 2
+                                    months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 text-brand-500">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 font-medium leading-relaxed">Secured an MSME loan easily because of the
+                        flawless project report they prepared for my manufacturing plant.</p>
+                    <div class="pt-6 border-t border-slate-100 mt-auto">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <p class="text-[10px] font-black text-brand-600 uppercase tracking-widest mb-1 italic">
+                                Response from owner</p>
+                            <p class="text-slate-500 text-xs font-medium leading-relaxed">"We are glad to fuel your
+                                growth!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white p-5 rounded-xl border border-slate-100 space-y-6 flex flex-col hover:shadow-2xl transition-all duration-300 relative group">
+                    <div class="absolute top-5 right-8">
+                        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                            alt="Google" class="h-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-black text-lg">
+                            H</div>
+                        <div>
+                            <h4 class="font-black text-slate-900">Harish Rao</h4>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="px-2 py-0.5 bg-brand-50 text-brand-600 text-[10px] font-black uppercase rounded-md">Project
+                                    Finance</span>
+                                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">1 review · 5
+                                    months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 text-brand-500">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 font-medium leading-relaxed">The CMA data preparation was quick, and we
+                        successfully pitched our funding requirement.</p>
+                    <div class="pt-6 border-t border-slate-100 mt-auto">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <p class="text-[10px] font-black text-brand-600 uppercase tracking-widest mb-1 italic">
+                                Response from owner</p>
+                            <p class="text-slate-500 text-xs font-medium leading-relaxed">"Glad to be a long-term
+                                partner."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white p-5 rounded-xl border border-slate-100 space-y-6 flex flex-col hover:shadow-2xl transition-all duration-300 relative group">
+                    <div class="absolute top-5 right-8">
+                        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                            alt="Google" class="h-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-black text-lg">
+                            S</div>
+                        <div>
+                            <h4 class="font-black text-slate-900">Sanjay Aggarwal</h4>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="px-2 py-0.5 bg-brand-50 text-brand-600 text-[10px] font-black uppercase rounded-md">Business
+                                    Loan</span>
+                                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">2 reviews · 8
+                                    months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-1 text-brand-500">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 font-medium leading-relaxed">Extremely professional. They handled all the
+                        bank liaison so I could focus on my business.</p>
+                    <div class="pt-6 border-t border-slate-100 mt-auto">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <p class="text-[10px] font-black text-brand-600 uppercase tracking-widest mb-1 italic">
+                                Response from owner</p>
+                            <p class="text-slate-500 text-xs font-medium leading-relaxed">"Focus on your dream, we
+                                handle the funds."</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ════════════ FAQ ════════════ -->
+    <section id="faq" class="py-16 lg:py-20 bg-brand-50 border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h4
+                    class="text-brand-600 font-bold tracking-widest uppercase text-sm mb-3 flex items-center justify-center gap-2">
+                    <span class="w-6 h-[2px] bg-brand-600"></span> FAQ <span class="w-6 h-[2px] bg-brand-600"></span>
+                </h4>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-950 mb-4">Loan Consultancy Questions</h2>
+            </div>
+            <div class="space-y-4">
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button
+                        class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none focus:bg-slate-50 hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-lg text-brand-950">What is CMA Data?</span>
+                        <i data-lucide="plus"
+                            class="faq-icon w-5 h-5 text-brand-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-slate-50">
+                        <p class="text-slate-600 pb-5 leading-relaxed">Credit Monitoring Arrangement (CMA) data is an
+                            analysis report of the past and projected financial performance of a company, rigorously
+                            required by banks to check creditworthiness for loans.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button
+                        class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none focus:bg-slate-50 hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-lg text-brand-950">Do you guarantee loan approval?</span>
+                        <i data-lucide="plus"
+                            class="faq-icon w-5 h-5 text-brand-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-slate-50">
+                        <p class="text-slate-600 pb-5 leading-relaxed">While we provide highly professional
+                            documentation to maximize your chances, the final loan approval strictly depends on the
+                            lending bank's policies and your CIBIL score.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button
+                        class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none focus:bg-slate-50 hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-lg text-brand-950">How long does a project report take?</span>
+                        <i data-lucide="plus"
+                            class="faq-icon w-5 h-5 text-brand-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-slate-50">
+                        <p class="text-slate-600 pb-5 leading-relaxed">A standard project report and CMA data usually
+                            take 3 to 5 working days depending on the complexity of your financials and data
+                            availability.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════ CONTACT / OFFICE ════════════ -->
+    <section id="contact" class="py-10 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left: Map -->
+                <div
+                    class="rounded-xl overflow-hidden shadow-2xl border-8 border-slate-50 h-[500px] group transition-transform hover:scale-[1.01] relative order-2 lg:order-1">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.2435552981584!2d77.0700085!3d28.592476599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b4632c7923f%3A0xe54d8969446f2576!2sRz%20364%20B%2C%20Gali%20No%202%2C%20Raj%20Nagar%2C%20Part-2%2C%20Palam%2C%20New%20Delhi%2C%20Delhi%20110077!5e0!3m2!1sen!2sin!4v1711956500000!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div
+                        class="absolute inset-0 bg-brand-900/10 pointer-events-none group-hover:opacity-0 transition-opacity">
+                    </div>
+                </div>
+
+                <!-- Right: Office Info -->
+                <div class="space-y-10 order-1 lg:order-2">
+                    <div class="space-y-4">
+                        <span class="text-brand-600 text-[10px] font-black uppercase tracking-[0.4em]">Connect with
+                            Us</span>
+                        <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">Visit
+                            Our Office</h2>
+                        <p class="text-slate-500 font-medium text-lg leading-relaxed">Walk in for a face-to-face
+                            consultation. We are located centrally for your convenience.</p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-6 items-start group">
+                            <div
+                                class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 shrink-0 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
+                                <i data-lucide="map-pin" class="w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-black text-slate-900 mb-1">Address</h4>
+                                <p class="text-slate-500 font-bold leading-relaxed">Rz 364 B, Gali No 2, Near Mamta
+                                    Bakery<br>Raj Nagar, Part-2, Palam, Delhi, 110077</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6 items-start group">
+                            <div
+                                class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                                <i data-lucide="clock" class="w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-black text-slate-900 mb-1">Hours</h4>
+                                <p
+                                    class="text-slate-500 font-bold leading-relaxed text-blue-600 uppercase tracking-widest text-sm">
+                                    Open 24 Hours</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6 items-start group">
+                            <div
+                                class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 shrink-0 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
+                                <i data-lucide="phone-call" class="w-7 h-7"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-black text-slate-900 mb-1">Phone</h4>
+                                <a href="tel:07495013592"
+                                    class="text-slate-500 font-bold text-xl hover:text-brand-600 transition-colors">074950
+                                    13592</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ════════════ FOOTER ════════════ -->
+    <footer class="bg-white text-slate-600 pt-16 pb-8 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="space-y-6">
+                    <a href="#"
+                        class="flex items-center gap-2 group transition-transform hover:scale-105 active:scale-95">
+                        <img src="TAXATION-logo.png" alt="TAXATION LOGO"
+                            class="h-12 w-auto object-contain mix-blend-multiply drop-shadow-sm">
+                    </a>
+                    <p class="text-sm leading-relaxed text-slate-500 font-medium">
+                        Simplifying taxes for individuals and businesses across India. Professional, accurate, and 24/7
+                        available to address your financial constraints instantly.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://www.instagram.com/" target="_blank"
+                            class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center hover:bg-brand-600 transition-colors text-brand-600 hover:text-white shadow-sm hover:-translate-y-1">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank"
+                            class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center hover:bg-brand-600 transition-colors text-brand-600 hover:text-white shadow-sm hover:-translate-y-1">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/917495013592" target="_blank"
+                            class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center hover:bg-[#25D366] transition-colors text-brand-600 hover:text-white shadow-sm hover:-translate-y-1">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@mytaxation" target="_blank"
+                            class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center hover:bg-[#FF0000] transition-colors text-brand-600 hover:text-white shadow-sm hover:-translate-y-1">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-sm font-black text-slate-900 mb-6 uppercase tracking-wider">Quick Links</h3>
+                    <ul class="space-y-4 text-sm font-bold text-slate-500">
+                        <li><a href="about.html"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> About Us</a></li>
+                        <li><a href="services.html"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> Our Services</a>
+                        </li>
+                        <li><a href="reviews.html"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> Testimonials</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="hover:text-brand-600 transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3 h-3 text-brand-500"></i> FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-sm font-black text-slate-900 mb-6 uppercase tracking-wider">Our Services</h3>
+                    <ul class="space-y-4 text-sm font-bold text-slate-500">
+                        <li><a href="itr-filing.html" class="hover:text-brand-600 transition-colors">ITR Filing &
+                                Planning</a></li>
+                        <li><a href="gst-registration.html" class="hover:text-brand-600 transition-colors">GST
+                                Registration & Filing</a>
+                        </li>
+                        <li><a href="business-registration.html" class="hover:text-brand-600 transition-colors">Company
+                                Registration</a></li>
+                        <li><a href="bookkeeping.html" class="hover:text-brand-600 transition-colors">Bookkeeping &
+                                Accounting</a></li>
+                        <li><a href="loan-consultancy.html" class="hover:text-brand-600 transition-colors">Loan
+                                Consultancy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Map -->
+                <div>
+                    <h3 class="text-sm font-black text-slate-900 mb-6 uppercase tracking-wider">Contact Us</h3>
+                    <div class="space-y-4 text-sm font-bold text-slate-500">
+                        <p class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-500 shrink-0"></i>
+                            <span>Rz 364 B, Gali No 2<br>Raj Nagar, Part-2, Palam<br>Delhi, 110077</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-500 shrink-0"></i>
+                            <a href="tel:07495013592" class="hover:text-brand-600 transition-colors">074950 13592</a>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-500 shrink-0"></i>
+                            <a href="mailto:mytaxationonlychoice@gmail.com"
+                                class="hover:text-brand-600 transition-colors">mytaxationonlychoice@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div
+                class="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-slate-400">
+                <p>&copy; 2026 MY TAXATION. Built for India. All rights reserved.</p>
+                <p>Designed by <a href="https://webresolv.agency/"
+                        class="text-brand-600 hover:text-brand-700 font-black">Webresolv</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- ════════════ FLOATING BUTTONS ════════════ -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+        <!-- Call Button -->
+        <a href="tel:07495013592"
+            class="w-14 h-14 bg-brand-600 text-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:bg-brand-700 hover:scale-110 transition-all duration-300 active:scale-95 animate-fade-in-up"
+            style="animation-delay: 0.1s;" aria-label="Call Us">
+            <i data-lucide="phone" class="w-6 h-6"></i>
+        </a>
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/917495013592" target="_blank"
+            class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(37,211,102,0.3)] hover:bg-[#128C7E] hover:scale-110 transition-all duration-300 active:scale-95 animate-fade-in-up"
+            style="animation-delay: 0.2s;" aria-label="WhatsApp Us">
+            <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // FAQ Accordion
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('.faq-icon');
+
+                // Close all other open FAQs
+                faqButtons.forEach(otherBtn => {
+                    if (otherBtn !== button) {
+                        otherBtn.nextElementSibling.style.maxHeight = '0';
+                        otherBtn.nextElementSibling.style.opacity = '0';
+                        otherBtn.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current FAQ
+                if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+                    answer.style.maxHeight = '0';
+                    answer.style.opacity = '0';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.maxHeight = '300px';
+                    answer.style.opacity = '1';
+                    icon.style.transform = 'rotate(45deg)';
+                }
+            });
+        });
+
+        // EMI Calculator Logic
+        const amountInput = document.getElementById('loan-amount');
+        const rateInput = document.getElementById('interest-rate');
+        const tenureInput = document.getElementById('loan-tenure');
+
+        const amountVal = document.getElementById('amount-val');
+        const rateVal = document.getElementById('rate-val');
+        const tenureVal = document.getElementById('tenure-val');
+
+        const monthlyEMI = document.getElementById('monthly-emi');
+        const totalInterest = document.getElementById('total-interest');
+
+        function calculateEMI() {
+            let P = parseFloat(amountInput.value);
+            let R = parseFloat(rateInput.value) / 12 / 100;
+            let N = parseFloat(tenureInput.value) * 12;
+
+            let emi = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+            let totalPayable = emi * N;
+            let totalInt = totalPayable - P;
+
+            amountVal.textContent = "₹" + (P / 100000).toFixed(1) + "L";
+            rateVal.textContent = rateInput.value + "%";
+            tenureVal.textContent = tenureInput.value + " yrs";
+
+            monthlyEMI.textContent = "₹" + Math.round(emi).toLocaleString('en-IN');
+            totalInterest.textContent = "₹" + (totalInt / 100000).toFixed(1) + "L";
+        }
+
+        [amountInput, rateInput, tenureInput].forEach(input => {
+            input.addEventListener('input', calculateEMI);
+        });
+
+        calculateEMI();
+    </script>
 </body>
+
 </html>
