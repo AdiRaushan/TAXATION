@@ -624,23 +624,28 @@
                 </div>
 
                 <!-- Right Column: Human Portrait (No Background Overlay) -->
-                <!-- Right Column: Premium Personal Branding (Creative Mobile Layout) -->
                 <div
-                    class="relative flex justify-center lg:justify-end animate-fade-in-right h-full pt-10 group/hero px-4 sm:px-0">
+                    class="relative flex justify-center lg:justify-center animate-fade-in-right h-full pt-10 group/hero px-4 sm:px-0">
 
-                    <!-- 2. Portrait Container (Bigger Image for Mobile) -->
+                    <!-- Clean Spotlight Backdrop for Desktop Cohesion -->
                     <div
-                        class="relative w-full max-w-[400px] sm:max-w-[440px] md:max-w-[500px] lg:max-w-[560px] transition-all duration-700 group-hover/hero:scale-[1.01] -mb-20 pointer-events-none select-none">
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-brand-50/50 rounded-full blur-[100px] -z-10 opacity-0 lg:opacity-100 transition-opacity duration-1000">
+                    </div>
 
-                        <!-- Expert Portrait -->
+                    <!-- 2. Portrait Container (Enhanced for Big Screens) -->
+                    <div
+                        class="relative w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[720px] xl:max-w-[880px] transition-all duration-700 group-hover/hero:scale-[1.02] -mb-16 pointer-events-none select-none">
+
+                        <!-- Expert Portrait (Fade mask added to fix weird cut-off) -->
                         <img src="hero section image.png" alt="Professional Tax Consultant"
-                            class="w-full h-auto object-contain drop-shadow-[0_40px_80px_rgba(32,126,190,0.22)] relative z-10 transition-transform duration-700 group-hover/hero:-translate-y-3">
+                            class="w-full h-auto object-contain relative z-10 transition-transform duration-700 group-hover/hero:-translate-y-4"
+                            style="-webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%); mask-image: linear-gradient(to bottom, black 85%, transparent 100%);">
 
-                        <!-- 3. Staggered Satellite Badges (Balanced Offsets) -->
+                        <!-- 3. Staggered Satellite Badges (Narrower & Integrated) -->
 
-                        <!-- Top Left: Verified (Framing shoulder without touching text) -->
+                        <!-- Top Left: Verified -->
                         <div
-                            class="absolute -left-4 lg:-left-10 top-[8%] lg:top-[12%] bg-white/95 backdrop-blur-2xl p-3 lg:p-4 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-white/70 flex items-center gap-3 lg:gap-4 animate-[float_4s_ease-in-out_infinite] z-20">
+                            class="absolute -left-2 lg:-left-12 xl:-left-16 top-[8%] lg:top-[12%] bg-white/95 backdrop-blur-2xl p-2.5 lg:p-3 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] border border-white/70 flex items-center gap-2.5 lg:gap-3 animate-[float_4s_ease-in-out_infinite] z-20">
                             <div
                                 class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/30">
                                 <i data-lucide="shield-check" class="w-5 h-5 lg:w-6 lg:h-6 text-white"></i>
@@ -653,9 +658,9 @@
                             </div>
                         </div>
 
-                        <!-- Mid Right: Fast Track (Balanced offset) -->
+                        <!-- Mid Right: Fast Track -->
                         <div
-                            class="absolute -right-6 lg:-right-12 top-[42%] lg:top-[40%] bg-white/95 backdrop-blur-2xl p-3 lg:p-4 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-white/70 flex items-center gap-3 lg:gap-4 animate-[float_5s_ease-in-out_infinite_v2] delay-700 z-20">
+                            class="absolute -right-2 lg:-right-10 xl:-right-14 top-[42%] lg:top-[40%] bg-white/95 backdrop-blur-2xl p-2.5 lg:p-3 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] border border-white/70 flex items-center gap-2.5 lg:gap-3 animate-[float_5s_ease-in-out_infinite_v2] delay-700 z-20">
                             <div
                                 class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
                                 <i data-lucide="zap" class="w-5 h-5 lg:w-6 lg:h-6 text-white"></i>
@@ -670,7 +675,7 @@
 
                         <!-- Bottom Left: Trust -->
                         <div
-                            class="absolute -left-2 lg:-left-8 bottom-[18%] lg:bottom-[10%] bg-white/95 backdrop-blur-2xl p-2.5 lg:p-3.5 rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-white/70 flex items-center gap-2.5 lg:gap-3 lg:gap-4 animate-[float_6s_ease-in-out_infinite_v3] delay-1000 z-20">
+                            class="absolute -left-1 lg:-left-8 xl:-left-12 bottom-[18%] lg:bottom-[10%] bg-white/95 backdrop-blur-2xl p-2 lg:p-3 rounded-2xl shadow-[0_15px_30px_rgba(0,0,0,0.08)] border border-white/70 flex items-center gap-2 lg:gap-3 animate-[float_6s_ease-in-out_infinite_v3] delay-1000 z-20">
                             <div
                                 class="w-8 h-8 lg:w-10 lg:h-10 bg-brand-50 rounded-lg flex items-center justify-center text-brand-600">
                                 <i data-lucide="award" class="w-4 h-4 lg:w-5 lg:h-5"></i>
