@@ -291,6 +291,64 @@
                 transform: translate(-8px, -18px);
             }
         }
+
+        /* Modal Styles */
+        #hire-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #hire-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #hire-modal {
+            background: white;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            transform: scale(0.9) translateY(20px);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        #hire-modal-overlay.active #hire-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .modal-close-btn:hover {
+            background: #e2e8f0;
+            transform: rotate(90deg);
+        }
     </style>
 </head>
 
@@ -479,7 +537,7 @@
     </nav>
 
     <!-- ════════════ HERO SECTION ════════════ -->
-    <section class="relative min-h-[70vh] flex items-center pt-16 pb-10 overflow-hidden bg-white font-sans">
+    <section class="relative min-h-[85vh] flex items-center pt-16 pb-12 overflow-hidden bg-white font-sans">
         <!-- Ultra-Soft Premium Accents -->
         <div
             class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-50/40 rounded-full blur-[120px] -z-10 pointer-events-none translate-x-[20%] -translate-y-[20%]">
@@ -506,7 +564,7 @@
                                 class="hidden lg:block" />
                             in India
                         </h1>
-                        <p class="text-lg md:text-xl text-slate-500 max-w-lg leading-relaxed font-medium">
+                        <p class="text-lg md:text-xl text-slate-500 max-w-xl leading-relaxed font-medium">
                             Expert Income Tax Filing & Strategic Tax Planning Services in India. Trusted by clients
                             across India for end-to-end tax & compliance solutions.
                         </p>
@@ -556,10 +614,10 @@
                                 </h3>
                                 <p class="text-brand-50 text-xs mb-4 leading-relaxed line-clamp-2">File your ITR with
                                     100% accuracy and expert guidance. Join 10,000+ happy clients in India.</p>
-                                <a href="contact.html"
+                                <button onclick="openHireModal()"
                                     class="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-white text-brand-600 rounded-xl font-extrabold text-sm hover:bg-brand-50 transition-colors shadow-md">
                                     File Your Taxes Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -570,20 +628,12 @@
                 <div
                     class="relative flex justify-center lg:justify-end animate-fade-in-right h-full pt-10 group/hero px-4 sm:px-0">
 
-                    <!-- 1. Creative Hero Backdrop (The "Spotlight") -->
-                    <div
-                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 md:w-96 md:h-96 bg-brand-500/20 rounded-full blur-[90px] animate-pulse -z-10">
-                    </div>
-                    <div
-                        class="absolute bottom-20 right-0 w-full h-[65%] bg-gradient-to-tr from-brand-50 to-blue-50/50 rounded-[40px] -rotate-2 -z-10 translate-y-10 lg:translate-x-12 opacity-90 backdrop-blur-3xl border border-brand-100/40">
-                    </div>
-
                     <!-- 2. Portrait Container (Bigger Image for Mobile) -->
                     <div
                         class="relative w-full max-w-[400px] sm:max-w-[440px] md:max-w-[500px] lg:max-w-[560px] transition-all duration-700 group-hover/hero:scale-[1.01] -mb-20 pointer-events-none select-none">
 
                         <!-- Expert Portrait -->
-                        <img src="images/tax_expert_transparent.png" alt="Professional Tax Consultant"
+                        <img src="hero section image.png" alt="Professional Tax Consultant"
                             class="w-full h-auto object-contain drop-shadow-[0_40px_80px_rgba(32,126,190,0.22)] relative z-10 transition-transform duration-700 group-hover/hero:-translate-y-3">
 
                         <!-- 3. Staggered Satellite Badges (Balanced Offsets) -->
@@ -1495,7 +1545,7 @@
                     class="flex w-full md:w-auto md:inline-flex items-center gap-3 px-8 py-4 bg-white border-2 border-slate-100 rounded-xl font-black text-slate-900 hover:border-brand-600 hover:text-brand-600 transition-all shadow-sm group">
                     <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
                         alt="Google" class="h-4">
-                    View 430+ More Reviews
+                    View More Reviews
                     <i data-lucide="arrow-up-right"
                         class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
                 </a>
@@ -2048,7 +2098,14 @@
             <!-- Copyright -->
             <div
                 class="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-slate-400">
-                <p>&copy; 2026 MY TAXATION. Built for India. All rights reserved.</p>
+                <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                    <p>&copy; 2026 MY TAXATION. Built for India. All rights reserved.</p>
+                    <div class="flex gap-4">
+                        <a href="terms.html" class="hover:text-brand-600 transition-colors">Terms</a>
+                        <a href="privacy.html" class="hover:text-brand-600 transition-colors">Privacy</a>
+                        <a href="refund-policy.html" class="hover:text-brand-600 transition-colors">Refund Policy</a>
+                    </div>
+                </div>
                 <p>Designed by <a href="https://webresolv.agency/"
                         class="text-brand-600 hover:text-brand-700 font-black">Webresolv</a>
                 </p>
@@ -2075,6 +2132,95 @@
         </a>
     </div>
 
+    <!-- ════════════ HIRE EXPERT MODAL ════════════ -->
+    <div id="hire-modal-overlay" onclick="closeHireModal(event)">
+        <div id="hire-modal" onclick="event.stopPropagation()">
+            <!-- Close Button -->
+            <div class="modal-close-btn" onclick="closeHireModal()">
+                <i data-lucide="x" class="w-5 h-5 text-slate-600"></i>
+            </div>
+
+            <!-- Modal Header -->
+            <div class="bg-brand-600 p-8 text-white relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl">
+                </div>
+                <h2 class="text-2xl font-black mb-2">Hire Your Tax Expert</h2>
+                <p class="text-brand-100 text-sm font-medium">Get professional assistance starting at just ₹499</p>
+
+                <!-- Fast Contact -->
+                <div class="flex flex-wrap gap-4 mt-6">
+                    <a href="mailto:mytaxationonlychoice@gmail.com"
+                        class="flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-lg text-xs font-bold hover:bg-white/20 transition-colors">
+                        <i data-lucide="mail" class="w-3.5 h-3.5"></i> Email Us
+                    </a>
+                    <a href="https://wa.me/917495013592" target="_blank"
+                        class="flex items-center gap-2 px-3 py-1.5 bg-green-500 rounded-lg text-xs font-bold hover:bg-green-600 transition-colors">
+                        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp: 074950 13592
+                    </a>
+                </div>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-8">
+                <form id="hire-form" class="space-y-5" onsubmit="handleHireSubmit(event)">
+                    <div>
+                        <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Your
+                            Name</label>
+                        <input type="text" name="name" required placeholder="Enter your full name"
+                            class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium text-slate-900 bg-slate-50/50">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Phone
+                            Number</label>
+                        <input type="tel" name="phone" required placeholder="Enter your mobile number"
+                            class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium text-slate-900 bg-slate-50/50">
+                    </div>
+
+                    <div class="relative">
+                        <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Service
+                            Required</label>
+                        <select name="service" required
+                            class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium text-slate-900 bg-slate-50/50 appearance-none cursor-pointer">
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="ITR Filing">ITR Filing & Planning</option>
+                            <option value="GST Registration">GST Registration</option>
+                            <option value="Bookkeeping">Bookkeeping & Accounting</option>
+                            <option value="Business Registration">Business Registration</option>
+                            <option value="Loan Consultancy">Loan Consultancy</option>
+                            <option value="Notice Help">Notice Help</option>
+                            <option value="TDS Return">TDS Return Filing</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div class="absolute right-4 bottom-4 pointer-events-none">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
+                        </div>
+                    </div>
+
+                    <p class="text-[10px] text-slate-400 font-bold italic text-center leading-relaxed">
+                        * Our expert will contact you shortly to discuss your requirements.
+                    </p>
+
+                    <button type="submit"
+                        class="w-full py-4 bg-brand-600 text-white rounded-xl font-black text-lg shadow-xl shadow-brand-600/20 hover:bg-brand-700 hover:-translate-y-0.5 transition-all">
+                        Request Call Back
+                    </button>
+                </form>
+
+                <!-- Success State -->
+                <div id="hire-success" class="hidden py-12 text-center animate-fade-in-up">
+                    <div
+                        class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="check-circle" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-2">Request Received!</h3>
+                    <p class="text-slate-500 font-medium">Our tax expert will call you back within 30 minutes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script>
         // Initialize Icons
@@ -2084,9 +2230,9 @@
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-
+                navbar.classList.add('nav-scrolled');
             } else {
-
+                navbar.classList.remove('nav-scrolled');
             }
         });
 
@@ -2115,6 +2261,38 @@
                 }
             });
         });
+
+        // Modal Logic
+        function openHireModal() {
+            document.getElementById('hire-modal-overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeHireModal(e) {
+            document.getElementById('hire-modal-overlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+            // Reset success state after closing
+            setTimeout(() => {
+                document.getElementById('hire-form').classList.remove('hidden');
+                document.getElementById('hire-success').classList.add('hidden');
+            }, 500);
+        }
+
+        function handleHireSubmit(e) {
+            e.preventDefault();
+            // Show success state
+            document.getElementById('hire-form').classList.add('hidden');
+            document.getElementById('hire-success').classList.remove('hidden');
+
+            // Auto close after 3 seconds
+            setTimeout(() => {
+                if (document.getElementById('hire-modal-overlay').classList.contains('active')) {
+                    closeHireModal();
+                }
+            }, 3000);
+
+            e.target.reset();
+        }
     </script>
 </body>
 
