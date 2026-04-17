@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,183 +60,11 @@
             }
         }
     </script>
-    <style>
-        :root {
-            /* BRAND COLOR PALETTE */
-            --brand-green: #207ebe;
-            --brand-green-hover: #1d6bbd;
-            --brand-blue: #2563eb;
-            --brand-blue-hover: #1e40af;
-            --text-main: #0f172a;
-            --text-muted: #64748b;
-            --bg-light: #f8fafc;
-            --white: #ffffff;
-
-            /* MOBILE & DESK RESPONSIVE FONTS */
-            --h1-size: clamp(2.5rem, 8vw, 4.5rem);
-            --h2-size: clamp(2rem, 5vw, 3rem);
-            --h3-size: clamp(1.25rem, 3vw, 1.75rem);
-            --body-text: clamp(1rem, 2vw, 1.125rem);
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-main);
-            overflow-x: hidden;
-        }
-
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .faq-answer {
-            transition: all 0.3s ease-in-out;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-        }
-
-        .faq-answer.open {
-            max-height: 300px;
-            opacity: 1;
-            padding-top: 1rem;
-        }
-
-        .nav-transparent {
-            background: transparent;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .nav-scrolled .nav-link {
-            color: #475569;
-        }
-
-        .nav-scrolled .logo-text {
-            color: var(--text-main);
-        }
-
-        .nav-scrolled .logo-accent {
-            color: var(--brand-green);
-        }
-
-        .service-icon-wrap {
-            transition: all 0.3s ease;
-        }
-
-        .group:hover .service-icon-wrap {
-            transform: scale(1.1) rotate(5deg);
-            background-color: var(--brand-green) !important;
-            color: white !important;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .animate-fade-in-right {
-            animation: fadeInRight 0.8s ease-out 0.2s forwards;
-            opacity: 0;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .animate-marquee {
-            animation: marquee 20s linear infinite;
-        }
-
-        .animate-marquee:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-15px) rotate(2deg);
-            }
-        }
-
-        @keyframes float_v2 {
-
-            0%,
-            100% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-
-            50% {
-                transform: translate(12px, -12px) rotate(-2deg);
-            }
-        }
-
-        @keyframes float_v3 {
-
-            0%,
-            100% {
-                transform: translate(0, 0);
-            }
-
-            50% {
-                transform: translate(-8px, -18px);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="antialiased selection:bg-brand-500 selection:text-white">
-<!-- ════════════ NAVBAR ════════════ -->
+    <!-- ════════════ NAVBAR ════════════ -->
     <nav id="navbar" class="sticky top-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between items-center px-4 md:px-6 py-3">
@@ -391,7 +220,8 @@
                                 class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-blue-600">GST
                                 Registration</a>
                             <a href="bookkeeping.html"
-                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-orange-600">Bookkeeping & Accounting</a>
+                                class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-orange-600">Bookkeeping &
+                                Accounting</a>
                             <a href="business-registration.html"
                                 class="px-4 py-2.5 text-xs font-bold text-slate-500 hover:text-emerald-600">Business
                                 Registration</a>
@@ -416,60 +246,81 @@
         </div>
     </nav>
 
-    
+
 
     <!-- ════════════ CONTACT HERO ════════════ -->
     <section class="py-12 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
             <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-                
+
                 <!-- Contact Info -->
                 <div class="space-y-8 md:space-y-12">
                     <div>
-                        <span class="text-brand-600 text-[10px] font-black uppercase tracking-[0.4em] mb-3 block">Get In Touch</span>
-                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-tight mb-4 md:mb-6">Let's Talk <br><span class="text-brand-600">Taxes & Business</span></h1>
-                        <p class="text-sm md:text-base lg:text-lg text-slate-500 font-medium leading-relaxed max-w-md">Our experts are available 24/7 to solve your financial queries. We respond within 30 minutes.</p>
+                        <span class="text-brand-600 text-[10px] font-black uppercase tracking-[0.4em] mb-3 block">Get In
+                            Touch</span>
+                        <h1
+                            class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-tight mb-4 md:mb-6">
+                            Let's Talk <br><span class="text-brand-600">Taxes & Business</span></h1>
+                        <p class="text-sm md:text-base lg:text-lg text-slate-500 font-medium leading-relaxed max-w-md">
+                            Our experts are available 24/7 to solve your financial queries. We respond within 30
+                            minutes.</p>
                     </div>
 
                     <div class="space-y-6 md:space-y-8">
                         <div class="flex items-start gap-4 md:gap-6 group">
-                            <div class="w-11 h-11 md:w-14 md:h-14 bg-brand-50 text-brand-600 rounded-xl md:rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-sm">
+                            <div
+                                class="w-11 h-11 md:w-14 md:h-14 bg-brand-50 text-brand-600 rounded-xl md:rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-sm">
                                 <i data-lucide="phone-call" class="w-5 h-5 md:w-6 md:h-6"></i>
                             </div>
                             <div>
-                                <p class="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Direct Call</p>
-                                <a href="tel:07495013592" class="text-base md:text-xl font-bold text-slate-900 hover:text-brand-600 transition-colors">074950 13592</a>
+                                <p
+                                    class="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-widest mb-1">
+                                    Direct Call</p>
+                                <a href="tel:07495013592"
+                                    class="text-base md:text-xl font-bold text-slate-900 hover:text-brand-600 transition-colors">074950
+                                    13592</a>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-4 md:gap-6 group">
-                            <div class="w-11 h-11 md:w-14 md:h-14 bg-brand-50 text-brand-600 rounded-xl md:rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-sm">
+                            <div
+                                class="w-11 h-11 md:w-14 md:h-14 bg-brand-50 text-brand-600 rounded-xl md:rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-sm">
                                 <i data-lucide="mail-check" class="w-5 h-5 md:w-6 md:h-6"></i>
                             </div>
                             <div class="min-w-0">
-                                <p class="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Email Support</p>
-                                <a href="mailto:mytaxationonlychoice@gmail.com" class="text-sm md:text-lg lg:text-xl font-bold text-slate-900 hover:text-brand-600 transition-colors break-all md:break-normal">mytaxationonlychoice@gmail.com</a>
+                                <p
+                                    class="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-widest mb-1">
+                                    Email Support</p>
+                                <a href="mailto:mytaxationonlychoice@gmail.com"
+                                    class="text-sm md:text-lg lg:text-xl font-bold text-slate-900 hover:text-brand-600 transition-colors break-all md:break-normal">mytaxationonlychoice@gmail.com</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Contact Form -->
-                <div class="p-5 md:p-8 lg:p-10 rounded-2xl md:rounded-[32px] shadow-xl md:shadow-2xl border border-slate-100 bg-white">
-                    <form class="space-y-4 md:space-y-6">
+                <div
+                    class="p-5 md:p-8 lg:p-10 rounded-2xl md:rounded-[32px] shadow-xl md:shadow-2xl border border-slate-100 bg-white">
+                    <form id="contact-page-form" class="space-y-4 md:space-y-6" onsubmit="handleContactSubmit(event)">
                         <div class="grid md:grid-cols-2 gap-4 md:gap-6">
                             <div>
-                                <label class="block text-xs md:text-sm font-black text-slate-700 mb-1.5 md:mb-2">Full Name</label>
-                                <input type="text" placeholder="Your Name" class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 text-sm md:text-base font-bold placeholder:text-slate-400">
+                                <label class="block text-xs md:text-sm font-black text-slate-700 mb-1.5 md:mb-2">Full
+                                    Name</label>
+                                <input type="text" name="name" required placeholder="Your Name"
+                                    class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 text-sm md:text-base font-bold placeholder:text-slate-400">
                             </div>
                             <div>
-                                <label class="block text-xs md:text-sm font-black text-slate-700 mb-1.5 md:mb-2">Phone Number</label>
-                                <input type="tel" placeholder="Your Phone" class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 text-sm md:text-base font-bold placeholder:text-slate-400">
+                                <label class="block text-xs md:text-sm font-black text-slate-700 mb-1.5 md:mb-2">Phone
+                                    Number</label>
+                                <input type="tel" name="phone" required placeholder="Your Phone"
+                                    class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 text-sm md:text-base font-bold placeholder:text-slate-400">
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs md:text-sm font-black text-slate-700 mb-1.5 md:mb-2">Service Required</label>
-                            <select class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-500 text-sm md:text-base font-bold appearance-none bg-white">
+                            <label class="block text-xs md:text-sm font-black text-slate-700 mb-1.5 md:mb-2">Service
+                                Required</label>
+                            <select name="service" required
+                                class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-500 text-sm md:text-base font-bold appearance-none bg-white">
                                 <option>ITR Filing</option>
                                 <option>GST Registration</option>
                                 <option>Business Registration</option>
@@ -479,10 +330,14 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs md:text-sm font-black text-slate-700 mb-1.5 md:mb-2">Message</label>
-                            <textarea rows="3" placeholder="How can we help?" class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-500 text-sm md:text-base font-bold placeholder:text-slate-400"></textarea>
+                            <label
+                                class="block text-xs md:text-sm font-black text-slate-700 mb-1.5 md:mb-2">Message</label>
+                            <textarea name="message" rows="3" placeholder="How can we help?"
+                                class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-500 text-sm md:text-base font-bold placeholder:text-slate-400"></textarea>
                         </div>
-                        <button type="button" class="w-full py-3.5 md:py-5 bg-brand-600 text-white rounded-xl font-black text-sm md:text-lg hover:bg-brand-700 hover:shadow-xl hover:shadow-brand-600/20 hover:-translate-y-1 transition-all">Send Message</button>
+                        <button type="submit"
+                            class="w-full py-3.5 md:py-5 bg-brand-600 text-white rounded-xl font-black text-sm md:text-lg hover:bg-brand-700 hover:shadow-xl hover:shadow-brand-600/20 hover:-translate-y-1 transition-all">Send
+                            Message</button>
                     </form>
                 </div>
 
@@ -490,7 +345,7 @@
         </div>
     </section>
 
-<!-- ════════════ CONTACT / OFFICE ════════════ -->
+    <!-- ════════════ CONTACT / OFFICE ════════════ -->
     <section id="contact" class="py-10 lg:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
             <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -512,8 +367,11 @@
                     <div class="space-y-3 md:space-y-4">
                         <span class="text-brand-600 text-[10px] font-black uppercase tracking-[0.4em]">Connect with
                             Us</span>
-                        <h2 class="text-2xl md:text-3xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">Visit Our Office</h2>
-                        <p class="text-slate-500 font-medium text-sm md:text-base lg:text-lg leading-relaxed">Walk in for a face-to-face
+                        <h2
+                            class="text-2xl md:text-3xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+                            Visit Our Office</h2>
+                        <p class="text-slate-500 font-medium text-sm md:text-base lg:text-lg leading-relaxed">Walk in
+                            for a face-to-face
                             consultation. We are centrally located for your convenience.</p>
                     </div>
 
@@ -525,7 +383,8 @@
                             </div>
                             <div>
                                 <h4 class="text-sm md:text-lg font-black text-slate-900 mb-1">Address</h4>
-                                <p class="text-xs md:text-sm lg:text-base text-slate-500 font-bold leading-relaxed">Rz 364 B, Gali No 2, Near Mamta
+                                <p class="text-xs md:text-sm lg:text-base text-slate-500 font-bold leading-relaxed">Rz
+                                    364 B, Gali No 2, Near Mamta
                                     Bakery<br>Raj Nagar, Part-2, Palam, Delhi, 110077</p>
                             </div>
                         </div>
@@ -561,8 +420,8 @@
         </div>
     </section>
 
-    
-<!-- ════════════ FAQ ════════════ -->
+
+    <!-- ════════════ FAQ ════════════ -->
     <section id="faq" class="py-10 lg:py-20 bg-brand-50">
         <div class="max-w-4xl mx-auto px-4 md:px-6">
             <div class="text-center mb-10 md:mb-16">
@@ -578,12 +437,14 @@
                 <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
                     <button
                         class="faq-btn w-full px-4 md:px-6 py-4 md:py-5 flex justify-between items-center text-left focus:outline-none focus:bg-slate-50 hover:bg-slate-50 transition-colors gap-3">
-                        <span class="font-bold text-sm md:text-base lg:text-lg text-brand-950">What documents do I need to file an ITR?</span>
+                        <span class="font-bold text-sm md:text-base lg:text-lg text-brand-950">What documents do I need
+                            to file an ITR?</span>
                         <i data-lucide="plus"
                             class="faq-icon w-4 h-4 md:w-5 md:h-5 text-brand-600 transition-transform duration-300 shrink-0"></i>
                     </button>
                     <div class="faq-answer px-4 md:px-6 bg-slate-50">
-                        <p class="text-slate-600 pb-4 md:pb-5 leading-relaxed text-xs md:text-sm lg:text-base">Generally, you will need your PAN card, Aadhaar
+                        <p class="text-slate-600 pb-4 md:pb-5 leading-relaxed text-xs md:text-sm lg:text-base">
+                            Generally, you will need your PAN card, Aadhaar
                             card, Form 16 (for salaried individuals), bank statements for the financial year, and
                             details of any investments or deductions (like LIC, PPF, or home loan certificates).</p>
                     </div>
@@ -593,12 +454,14 @@
                 <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
                     <button
                         class="faq-btn w-full px-4 md:px-6 py-4 md:py-5 flex justify-between items-center text-left focus:outline-none focus:bg-slate-50 hover:bg-slate-50 transition-colors gap-3">
-                        <span class="font-bold text-sm md:text-base lg:text-lg text-brand-950">Who is required to register for GST?</span>
+                        <span class="font-bold text-sm md:text-base lg:text-lg text-brand-950">Who is required to
+                            register for GST?</span>
                         <i data-lucide="plus"
                             class="faq-icon w-4 h-4 md:w-5 md:h-5 text-brand-600 transition-transform duration-300 shrink-0"></i>
                     </button>
                     <div class="faq-answer px-4 md:px-6 bg-slate-50">
-                        <p class="text-slate-600 pb-4 md:pb-5 leading-relaxed text-xs md:text-sm lg:text-base">Any business with an annual turnover exceeding
+                        <p class="text-slate-600 pb-4 md:pb-5 leading-relaxed text-xs md:text-sm lg:text-base">Any
+                            business with an annual turnover exceeding
                             Rs. 40 Lakhs (for goods) or Rs. 20 Lakhs (for services) must register for GST. Additionally,
                             individuals involved in inter-state supply or e-commerce must mandatorily register
                             regardless of turnover.</p>
@@ -609,12 +472,14 @@
                 <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
                     <button
                         class="faq-btn w-full px-4 md:px-6 py-4 md:py-5 flex justify-between items-center text-left focus:outline-none focus:bg-slate-50 hover:bg-slate-50 transition-colors gap-3">
-                        <span class="font-bold text-sm md:text-base lg:text-lg text-brand-950">Are you actually open 24/7?</span>
+                        <span class="font-bold text-sm md:text-base lg:text-lg text-brand-950">Are you actually open
+                            24/7?</span>
                         <i data-lucide="plus"
                             class="faq-icon w-4 h-4 md:w-5 md:h-5 text-brand-600 transition-transform duration-300 shrink-0"></i>
                     </button>
                     <div class="faq-answer px-4 md:px-6 bg-slate-50">
-                        <p class="text-slate-600 pb-4 md:pb-5 leading-relaxed text-xs md:text-sm lg:text-base">Yes! We understand that financial emergencies and
+                        <p class="text-slate-600 pb-4 md:pb-5 leading-relaxed text-xs md:text-sm lg:text-base">Yes! We
+                            understand that financial emergencies and
                             tax deadlines don't adhere to business hours. You can call us or visit our Palam office
                             anytime – day or night – for immediate tax assistance.</p>
                     </div>
@@ -624,12 +489,14 @@
                 <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
                     <button
                         class="faq-btn w-full px-4 md:px-6 py-4 md:py-5 flex justify-between items-center text-left focus:outline-none focus:bg-slate-50 hover:bg-slate-50 transition-colors gap-3">
-                        <span class="font-bold text-sm md:text-base lg:text-lg text-brand-950">How long to get a GST number?</span>
+                        <span class="font-bold text-sm md:text-base lg:text-lg text-brand-950">How long to get a GST
+                            number?</span>
                         <i data-lucide="plus"
                             class="faq-icon w-4 h-4 md:w-5 md:h-5 text-brand-600 transition-transform duration-300 shrink-0"></i>
                     </button>
                     <div class="faq-answer px-4 md:px-6 bg-slate-50">
-                        <p class="text-slate-600 pb-4 md:pb-5 leading-relaxed text-xs md:text-sm lg:text-base">Once all necessary documents are submitted
+                        <p class="text-slate-600 pb-4 md:pb-5 leading-relaxed text-xs md:text-sm lg:text-base">Once all
+                            necessary documents are submitted
                             successfully to the portal, a GST registration Certificate (GSTIN) is typically issued
                             within 3 to 7 working days, subject to government processing.</p>
                     </div>
@@ -638,8 +505,8 @@
         </div>
     </section>
 
-    
-<!-- ════════════ FOOTER ════════════ -->
+
+    <!-- ════════════ FOOTER ════════════ -->
     <footer class="bg-white text-slate-600 pt-10 md:pt-16 pb-8 border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
             <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-16">
@@ -789,48 +656,96 @@
         </a>
     </div>
 
-    <!-- Scripts -->
-    <script>
-        // Initialize Icons
-        lucide.createIcons();
+    <!-- ════════════ HIRE EXPERT MODAL ════════════ -->
+    <div id="hire-modal-overlay" onclick="closeHireModal(event)">
+        <div id="hire-modal" onclick="event.stopPropagation()">
+            <!-- Close Button -->
+            <div class="modal-close-btn" onclick="closeHireModal()">
+                <i data-lucide="x" class="w-5 h-5 text-slate-600"></i>
+            </div>
 
-        // Navbar Scroll Effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
+            <!-- Modal Header -->
+            <div class="bg-brand-600 p-8 text-white relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl">
+                </div>
+                <h2 class="text-2xl font-black mb-2">Hire Your Tax Expert</h2>
+                <p class="text-brand-100 text-sm font-medium">Get professional assistance starting at just ₹499</p>
 
-            } else {
+                <!-- Fast Contact -->
+                <div class="flex flex-wrap gap-4 mt-6">
+                    <a href="mailto:mytaxationonlychoice@gmail.com"
+                        class="flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-lg text-xs font-bold hover:bg-white/20 transition-colors">
+                        <i data-lucide="mail" class="w-3.5 h-3.5"></i> Email Us
+                    </a>
+                    <a href="https://wa.me/917495013592" target="_blank"
+                        class="flex items-center gap-2 px-3 py-1.5 bg-green-500 rounded-lg text-xs font-bold hover:bg-green-600 transition-colors">
+                        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp: 074950 13592
+                    </a>
+                </div>
+            </div>
 
-            }
-        });
+            <!-- Modal Body -->
+            <div class="p-8">
+                <form id="hire-form" class="space-y-5" onsubmit="handleHireSubmit(event)">
+                    <div>
+                        <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Your
+                            Name</label>
+                        <input type="text" name="name" required placeholder="Enter your full name"
+                            class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium text-slate-900 bg-slate-50/50">
+                    </div>
 
-        // FAQ Accordion
-        const faqButtons = document.querySelectorAll('.faq-btn');
-        faqButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                const icon = button.querySelector('.faq-icon');
+                    <div>
+                        <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Phone
+                            Number</label>
+                        <input type="tel" name="phone" required placeholder="Enter your mobile number"
+                            class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium text-slate-900 bg-slate-50/50">
+                    </div>
 
-                // Close all other open FAQs
-                faqButtons.forEach(otherBtn => {
-                    if (otherBtn !== button) {
-                        otherBtn.nextElementSibling.classList.remove('open');
-                        otherBtn.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
-                    }
-                });
+                    <div class="relative">
+                        <label class="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Service
+                            Required</label>
+                        <select name="service" required
+                            class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium text-slate-900 bg-slate-50/50 appearance-none cursor-pointer">
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="ITR Filing">ITR Filing & Planning</option>
+                            <option value="GST Registration">GST Registration</option>
+                            <option value="Bookkeeping">Bookkeeping & Accounting</option>
+                            <option value="Business Registration">Business Registration</option>
+                            <option value="Loan Consultancy">Loan Consultancy</option>
+                            <option value="Notice Help">Notice Help</option>
+                            <option value="TDS Return">TDS Return Filing</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div class="absolute right-4 bottom-4 pointer-events-none">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
+                        </div>
+                    </div>
 
-                // Toggle current FAQ
-                if (answer.classList.contains('open')) {
-                    answer.classList.remove('open');
-                    icon.style.transform = 'rotate(0deg)';
-                } else {
-                    answer.classList.add('open');
-                    icon.style.transform = 'rotate(45deg)';
-                }
-            });
-        });
-    </script>
+                    <p class="text-[10px] text-slate-400 font-bold italic text-center leading-relaxed">
+                        * Our expert will contact you shortly to discuss your requirements.
+                    </p>
+
+                    <button type="submit"
+                        class="w-full py-4 bg-brand-600 text-white rounded-xl font-black text-lg shadow-xl shadow-brand-600/20 hover:bg-brand-700 hover:-translate-y-0.5 transition-all">
+                        Request Call Back
+                    </button>
+                </form>
+
+                <!-- Success State -->
+                <div id="hire-success" class="hidden py-12 text-center animate-fade-in-up">
+                    <div
+                        class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="check-circle" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-2">Request Received!</h3>
+                    <p class="text-slate-500 font-medium">Our tax expert will call you back within 30 minutes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
 </body>
 
-</html>
-
+</html>

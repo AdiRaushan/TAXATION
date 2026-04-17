@@ -824,7 +824,8 @@
                     <h3 class="text-xl font-bold text-brand-950 mb-3 group-hover:text-brand-600 transition-colors">
                         Bookkeeping Services in India</h3>
                     <p class="text-slate-600 mb-6 line-clamp-4">
-                        Maintain crystal-clear records with our expert bookkeeping services in India. We provide professional
+                        Maintain crystal-clear records with our expert bookkeeping services in India. We provide
+                        professional
                         accounting, P&L statements, and MIS reports to help you make data-driven decisions and launch
                         your growth.
                     </p>
@@ -2310,7 +2311,19 @@
 
         function handleHireSubmit(e) {
             e.preventDefault();
-            // Show success state
+            const formData = new FormData(e.target);
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const service = formData.get('service');
+
+            const emailTo = "lalmakan2a@gmail.com";
+            const subject = `Callback Request: ${service} for ${name}`;
+            const body = `Hello MY TAXATION,\n\nYou have a new callback request:\n\nName: ${name}\nPhone: ${phone}\nService Requested: ${service}\n\nPlease contact the customer directly at the number provided above.`;
+
+            // Opens user's mail client with prefilled info
+            window.location.href = `mailto:${emailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // Show success state in UI
             document.getElementById('hire-form').classList.add('hidden');
             document.getElementById('hire-success').classList.remove('hidden');
 
