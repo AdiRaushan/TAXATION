@@ -2320,12 +2320,12 @@
             btn.innerText = "Sending...";
 
             const formData = new FormData(form);
-            
+
             // Add Web3Forms specific fields
             formData.append("access_key", "46702f43-4e67-470e-91ba-29572e711aa5");
             formData.append("subject", `New Callback Request: ${formData.get('service')} from ${formData.get('name')}`);
             formData.append("from_name", "MY TAXATION (Request Call)");
-            
+
             formData.append("replyto", "mytaxationonlychoice@gmail.com");
             try {
                 const response = await fetch("https://api.web3forms.com/submit", {
