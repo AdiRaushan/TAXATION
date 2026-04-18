@@ -2119,8 +2119,8 @@
                         </p>
                         <p class="flex items-center gap-3">
                             <i data-lucide="mail" class="w-5 h-5 text-brand-500 shrink-0"></i>
-                            <a href="mailto:lalmakan2a@gmail.com"
-                                class="hover:text-brand-600 transition-colors">lalmakan2a@gmail.com</a>
+                            <a href="mailto:mytaxationonlychoice@gmail.com"
+                                class="hover:text-brand-600 transition-colors">mytaxationonlychoice@gmail.com</a>
                         </p>
                     </div>
                 </div>
@@ -2181,7 +2181,7 @@
 
                 <!-- Fast Contact -->
                 <div class="flex flex-wrap gap-4 mt-6">
-                    <a href="mailto:lalmakan2a@gmail.com"
+                    <a href="mailto:mytaxationonlychoice@gmail.com"
                         class="flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-lg text-xs font-bold hover:bg-white/20 transition-colors">
                         <i data-lucide="mail" class="w-3.5 h-3.5"></i> Email Us
                     </a>
@@ -2326,9 +2326,7 @@
             formData.append("subject", `New Callback Request: ${formData.get('service')} from ${formData.get('name')}`);
             formData.append("from_name", "MY TAXATION (Request Call)");
             
-            // Add honeypot if you want (optional)
-            // formData.append("botcheck", ""); 
-
+            formData.append("replyto", "mytaxationonlychoice@gmail.com");
             try {
                 const response = await fetch("https://api.web3forms.com/submit", {
                     method: "POST",

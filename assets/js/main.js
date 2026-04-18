@@ -102,6 +102,7 @@ async function handleHireSubmit(e) {
   formData.append("access_key", "46702f43-4e67-470e-91ba-29572e711aa5");
   formData.append("subject", `Callback Request: ${formData.get('service')} from ${formData.get('name')}`);
   formData.append("from_name", "MY TAXATION (Callback Modal)");
+  formData.append("replyto", "mytaxationonlychoice@gmail.com");
 
   try {
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -155,6 +156,7 @@ async function handleContactSubmit(e) {
   formData.append("access_key", "46702f43-4e67-470e-91ba-29572e711aa5");
   formData.append("subject", `New Inquiry from ${formData.get('name')}`);
   formData.append("from_name", "MY TAXATION (Contact Page)");
+  formData.append("replyto", "mytaxationonlychoice@gmail.com");
 
   try {
     const response = await fetch("https://api.web3forms.com/submit", {
