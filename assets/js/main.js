@@ -83,51 +83,101 @@ function closeHireModal() {
   }
 }
 
-// DIRECT MAIL REDIRECTION
-function handleHireSubmit(e) {
+// DIRECT BACKGROUND EMAIL SUBMISSION
+async function handleHireSubmit(e) {
   e.preventDefault();
-  const formData = new FormData(e.target);
-  const name = formData.get("name");
-  const phone = formData.get("phone");
-  const service = formData.get("service");
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const originalBtnText = btn?.innerText;
 
-  const emailTo = "lalmakan2a@gmail.com";
-  const subject = `Callback Request: ${service} for ${name}`;
-  const body = `Hello MY TAXATION,\n\nYou have a new callback request:\n\nName: ${name}\nPhone: ${phone}\nService Requested: ${service}\n\nPlease contact the customer directly at the number provided above.`;
-
-  // Opens user's mail client with prefilled info
-  window.location.href = `mailto:${emailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-  // Show success message in UI
-  const form = document.getElementById("hire-form");
-  const success = document.getElementById("hire-success");
-  if (form && success) {
-    form.classList.add("hidden");
-    success.classList.remove("hidden");
-    setTimeout(() => {
-      closeHireModal();
-    }, 4000);
+  // Show loading state
+  if (btn) {
+    btn.disabled = true;
+    btn.innerText = "Sending...";
   }
 
-  e.target.reset();
+  const formData = new FormData(form);
+  
+  // Add Web3Forms fields
+  formData.append("access_key", "46702f43-4e67-470e-91ba-29572e711aa5");
+  formData.append("subject", `Callback Request: ${formData.get('service')} from ${formData.get('name')}`);
+  formData.append("from_name", "MY TAXATION (Callback Modal)");
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      // Show success message in UI
+      const formElement = document.getElementById("hire-form");
+      const success = document.getElementById("hire-success");
+      if (formElement && success) {
+        formElement.classList.add("hidden");
+        success.classList.remove("hidden");
+        setTimeout(() => {
+          closeHireModal();
+        }, 5000);
+      }
+      form.reset();
+    } else {
+      console.error("Submission error:", result);
+      alert("Submission failed: " + (result.message || "Unknown error") + ". Please try WhatsApp.");
+    }
+  } catch (error) {
+    console.error("Network error:", error);
+    alert("Network error. Please try WhatsApp for immediate support.");
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.innerText = originalBtnText;
+    }
+  }
 }
 
 // CONTACT PAGE FORM SUBMISSION
-function handleContactSubmit(e) {
+async function handleContactSubmit(e) {
   e.preventDefault();
-  const formData = new FormData(e.target);
-  const name = formData.get("name");
-  const phone = formData.get("phone");
-  const service = formData.get("service");
-  const message = formData.get("message");
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const originalBtnText = btn?.innerText;
 
-  const emailTo = "lalmakan2a@gmail.com";
-  const subject = `New Inquiry: ${service} from ${name}`;
-  const body = `Hello MY TAXATION team,\n\nYou have a new inquiry from your contact page:\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nMessage: ${message}\n\nPlease respond to this inquiry as soon as possible.`;
+  if (btn) {
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+  }
 
-  window.location.href = `mailto:${emailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const formData = new FormData(form);
+  
+  formData.append("access_key", "46702f43-4e67-470e-91ba-29572e711aa5");
+  formData.append("subject", `New Inquiry from ${formData.get('name')}`);
+  formData.append("from_name", "MY TAXATION (Contact Page)");
 
-  alert(
-    "Thank you! Your email client will now open with your message details. Please press 'Send' in your email app.",
-  );
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert("Thank you! Your message has been sent successfully. We will get back to you soon.");
+      form.reset();
+    } else {
+      console.error("Submission error:", result);
+      alert("Something went wrong: " + (result.message || "Unknown error") + ". Please try again.");
+    }
+  } catch (error) {
+    console.error("Network error:", error);
+    alert("Submission failed. Please check your internet connection.");
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.innerText = originalBtnText;
+    }
+  }
 }

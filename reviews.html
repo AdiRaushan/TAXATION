@@ -509,78 +509,73 @@
 
     <script>
         const REVIEWS = [
-            // ITR CATEGORY
+            // LONG REVIEWS FIRST
+            { name: "KUMAR gaurav", stats: "4 reviews", date: "7 months ago", category: "refund", rating: 5, comment: "Very smoothly they filed my itr, they are best, they have very good knowledge and always do the best and i got my tds refund within 3 hours, truely amazing,thanks🙏", response: "Thank you Kumar Gaurav ji for your valuable feedback 🙏. We are glad that MY TAXATION could file your ITR smoothly and help you receive your TDS refund within hours." },
+            { name: "PRATEEK R ARORA", stats: "8 reviews", date: "4 years ago", category: "service", rating: 5, comment: "Very good service and fast response for ITR and other account related services. happy with the way their team handles my accounting.", response: "Thanks Prateek ji for availing services and getting refund within one week" },
+            { name: "Vishnu Kumar", stats: "1 review", date: "7 months ago", category: "gst", rating: 5, comment: "I tried many service providers for GST filing but MY TAXATION's professional approach and timely work are unmatched", response: "धन्यवाद! आपने MY TAXATION को Delhi में अपनी ITR filing और tax consultant service के लिए चुना।" },
+            { name: "vinod kumar", stats: "1 review", date: "7 months ago", category: "gst", rating: 5, comment: "Perfect place for GST Audit and return filing. The tram is polite patient and always ready to answer questions.", response: "Thank you for using our GST filing + ITR filing combo service." },
+            { name: "Mona Kumari", stats: "1 review", date: "7 months ago", category: "gst", rating: 5, comment: "i tried many place for gst filing, but my taxation's professional approach and timely work are unmatched.", response: "Thank you for trusting MY TAXATION for your first ITR filing in Delhi." },
+            { name: "Pardeep Shatma", stats: "1 review", date: "8 months ago", category: "refund", rating: 5, comment: "One of the best taxation firm in delhi NCR I got my refund very quickly", response: "We are thrilled you got your TDS refund within hours. Fast refunds and accurate filing are what make MY TAXATION one of the most trusted CA firms." },
+            { name: "arvind singh", stats: "7 reviews", date: "4 years ago", category: "service", rating: 5, comment: "Best financial services provider with accurate information and professional behaviour👍", response: "Thanks sir.Our experience of more than 8 years helps us in providing accurate services." },
+            { name: "Saurav Choudhary", stats: "2 reviews", date: "7 months ago", category: "refund", rating: 5, comment: "I got my refund quickly and one of the best taxation firm", response: "We are glad to know that you received your TDS refund quickly. At MY TAXATION, our expert CAs work hard to ensure smooth and fast filing." },
+            { name: "Paresh Meher", stats: "3 reviews", date: "4 years ago", category: "service", rating: 5, comment: "Filling ITR is no more a cumbersome task. The service is very quick and resposive. . Wonderful job.", response: "Thanks Paresh ji for your encouraging words." },
+            { name: "Shankar Kumar", stats: "1 review", date: "7 months ago", category: "refund", rating: 5, comment: "Best taxation firm i got my refund quickly knowledgeable and well trained staff", response: "We are glad you received your TDS refund quickly. At MY TAXATION, we focus on fast and hassle-free income tax return filing." },
+            { name: "Sonu Kumar", stats: "1 review", date: "7 months ago", category: "gst", rating: 5, comment: "They solved every GST related problem registration, filling, or Even replying to notices", response: "We are thrilled you liked our online ITR filing service." },
+            { name: "Sanjeev Verma", stats: "1 review", date: "7 months ago", category: "gst", rating: 5, comment: "Perfect place for GST audit and return filing. The team is polite, patient.", response: "We are happy you liked our online ITR filing service." },
+            { name: "vinod kumar", stats: "1 review", date: "2 years ago", category: "service", rating: 5, comment: "I am fully satisfied through their services,they have throughly knowledge of tax and accounting", response: "Thank u very much ji" },
+            { name: "mithilesh srivastava", stats: "1 review", date: "4 years ago", category: "service", rating: 5, comment: "I am satisfied with there service And I recommend everyone specially my friends", response: "We are very happy that we have meet to your expectation of filing online income return." },
             { name: "Mohit Gour", stats: "2 reviews", date: "4 years ago", category: "itr", rating: 5, comment: "i always filled ITR through mytaxation,they are expert in this field", response: "Yes Mohit ji,Due to experience of more than 8 years we are able to fulfill expectation of you in field of Taxation" },
-            { name: "Avtar Singh", stats: "1 review", date: "a year ago", category: "itr", rating: 5, comment: "Satisfied by their ITR SERVICES" },
-            { name: "Sikander kumar", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Good and knowledgeable,will recommend for ITR FILLING", response: "Thank u for recommending us" },
+            { name: "Sanjay Kumar", stats: "3 reviews", date: "3 years ago", category: "gst", rating: 5, comment: "Gst, itr, project report, they done every task efficiently and effectively", response: "Thanks Sanjay ji for Trusting in MT Team" },
             { name: "Himanshu Arora", stats: "1 review", date: "4 years ago", category: "itr", rating: 5, comment: "I m filling itr from my taxation. Its error free", response: "We are glad to hear it from you.Our aim is to customer enrichment" },
-            { name: "Ekta Saini", stats: "8 reviews", date: "4 years ago", category: "itr", rating: 5, comment: "Good service provider for ITR and GST", response: "Thanks Ekta Ji,we are in journey from Good to Best" },
+            { name: "pinki grover", stats: "2 reviews", date: "4 years ago", category: "service", rating: 5, comment: "My whole family files ITR throught my taxation.Their services are very good.", response: "We are happy that u had good experience with MY Taxation" },
+            { name: "Milan Vyas", stats: "164 reviews", date: "2 years ago", category: "refund", rating: 5, comment: "Best service. I avail the service for my family & got around refund of 1 Lakh..", response: "Thank u Milan ji for availing our services" },
+            { name: "Sikander kumar", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Good and knowledgeable,will recommend for ITR FILLING", response: "Thank u for recommending us" },
+            { name: "Yogi Kumar", stats: "6 reviews", date: "4 years ago", category: "service", rating: 5, comment: "I am using their services since last five years. I am fully satisfied", response: "Yes Yogi ji,You are our consistent customer of IT return." },
+            { name: "kanchan maurya", stats: "3 reviews", date: "4 years ago", category: "service", rating: 5, comment: "Great service.. file ITR through My Taxation nd save time nd money...👍", response: "Thanks kanchan ji.Your words gives us encouragement" },
+            { name: "Varsha Varsha", stats: "1 review", date: "2 years ago", category: "gst", rating: 5, comment: "Very good for itr gst and taxation. no 1 in delhi ncr and palam" },
+            { name: "Ahir Jash", stats: "2 reviews", date: "4 years ago", category: "itr", rating: 5, comment: "I always trust on my taxation to file my ITR", response: "Thanks Jash ji,You are our proud customer from Gujarat" },
+            { name: "Tarun Kumar Bhardwaj", stats: "4 reviews", date: "4 years ago", category: "service", rating: 5, comment: "I got my refund on time And good service available at low cost", response: "Thanks for availing salaried ITR services from our website." },
             { name: "raghav baldaniya", stats: "1 review", date: "4 years ago", category: "itr", rating: 5, comment: "I filed Itr through my taxation.It is very easy", response: "Thanku Baldaniya ji.You are our valuable customer from Gujarat" },
-            { name: "Ashok Kumar", stats: "2 reviews", date: "4 years ago", category: "itr", rating: 5, comment: "Best ITR service in Delhi NCR", response: "Thanks Ashok ji for availing services and getting quick refund" },
+            { name: "Shispal Khari", stats: "1 review", date: "a year ago", category: "refund", rating: 5, comment: "I got my refund sir thanks for your quality services thank u MT" },
+            { name: "Preeti Mander", stats: "1 review", date: "a year ago", category: "refund", rating: 5, comment: "Best quality taxation services by mT I got my refund quickly" },
+            { name: "gaurav kumar", stats: "1 review", date: "a year ago", category: "refund", rating: 5, comment: "One of the best taxation services by MT in Delhi NCR I got my refund quickly" },
+            { name: "Gaurav parjapati", stats: "2 reviews", date: "6 months ago", category: "refund", rating: 5, comment: "I got my refund quickly best taxation firm in Delhi NCR", response: "Thanks gaurav for your honest feedback" },
+            { name: "Ekta Saini", stats: "8 reviews", date: "4 years ago", category: "itr", rating: 5, comment: "Good service provider for ITR and GST", response: "Thanks Ekta Ji,we are in journey from Good to Best" },
+            { name: "Yogesh 19ME2016", stats: "2 reviews", date: "4 years ago", category: "service", rating: 5, comment: "Service is good and very fast and easy to acess", response: "Thanks Yogesh ji.We are happy that u like services" },
+            { name: "mahak Raheja", stats: "2 reviews", date: "4 years ago", category: "service", rating: 5, comment: "Have good exprience service is good and very fast", response: "Thanks Raheja Ji." },
             { name: "Manoj Kumar", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Good taxation and ITR services in Delhi NCR", response: "Thank u ji" },
             { name: "Kalu ram", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Best tax and ITR consultant in delhi", response: "Thank u very much" },
-            { name: "Bharat Kargwal", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Most reliable itr and taxation services" },
-            { name: "Ahir Jash", stats: "2 reviews", date: "4 years ago", category: "itr", rating: 5, comment: "I always trust on my taxation to file my ITR", response: "Thanks Jash ji,You are our proud customer from Gujarat" },
-            { name: "Akash deep Singh", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Best in itr taxation and gst" },
-            { name: "Vijay Kumar", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Best for ITR in delhi" },
-            { name: "Guarav Samriya", stats: "2 reviews", date: "4 years ago", category: "itr", rating: 5, comment: "Best ITR WEBSITE IN INDIA", response: "Thanks Gaurav for your kind words" },
-            { name: "Guri Singh", stats: "1 review", date: "a year ago", category: "itr", rating: 5, comment: "Satisfied by their ITR services" },
-            { name: "Sugriv Kumar", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Good experience of ITR filling", response: "Thank u very much Sugriv ji" },
-            { name: "Gursevak Sandhu", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Good experience of itr" },
-            { name: "Mukesh Kumar", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Right ca for itr in delhi" },
-            { name: "jitender Rajvanshi", stats: "4 reviews", date: "2 years ago", category: "itr", rating: 5, comment: "Best in taxation and ITR" },
-            { name: "Vijender singh Bhati", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Best in the field of ITR" },
-
-            // REFUND CATEGORY
-            { name: "KUMAR gaurav", stats: "4 reviews", date: "7 months ago", category: "refund", rating: 5, comment: "Very smoothly they filed my itr, they are best, they have very good knowledge and always do the best and i got my tds refund within 3 hours, truely amazing,thanks🙏", response: "Thank you Kumar Gaurav ji for your valuable feedback 🙏. We are glad that MY TAXATION could file your ITR smoothly and help you receive your TDS refund within hours." },
-            { name: "Gaurav parjapati", stats: "2 reviews", date: "6 months ago", category: "refund", rating: 5, comment: "I got my refund quickly best taxation firm in Delhi NCR", response: "Thanks gaurav for your honest feedback" },
-            { name: "Shankar Kumar", stats: "1 review", date: "7 months ago", category: "refund", rating: 5, comment: "Best taxation firm i got my refund quickly knowledgeable and well trained staff", response: "We are glad you received your TDS refund quickly. At MY TAXATION, we focus on fast and hassle-free income tax return filing." },
+            { name: "Omparkash Deshwal", stats: "2 reviews", date: "2 years ago", category: "refund", rating: 5, comment: "I got my refund thank you sir best service" },
+            { name: "Ashok Rawat", stats: "1 review", date: "2 years ago", category: "refund", rating: 5, comment: "I got my refund very quickly thank you so much sir" },
             { name: "Sudhir Rao", stats: "3 reviews", date: "6 months ago", category: "refund", rating: 5, comment: "I got my refund thank u my taxation", response: "Thanks Sudhir ji for availing Income Tax return services from us and getting your refund timely" },
             { name: "Monu Dagar Mandkoleya", stats: "1 review", date: "10 months ago", category: "refund", rating: 5, comment: "I got my refund very cooperative staff and best taxation firm in NCR", response: "Thanks for availing services of MY TAXATION" },
             { name: "Reena", stats: "2 reviews", date: "5 months ago", category: "refund", rating: 5, comment: "Best taxation firm I got my refund quickly", response: "Thanks Reena ji ,we are glad that u have got your Income Tax Refund quickly." },
-            { name: "Jitender Dagar", stats: "1 review", date: "6 months ago", category: "refund", rating: 5, comment: "Best firm i got my refund quickly", response: "Thanks Jitender ji" },
-            { name: "Pardeep Shatma", stats: "1 review", date: "8 months ago", category: "refund", rating: 5, comment: "One of the best taxation firm in delhi NCR I got my refund very quickly", response: "We are thrilled you got your TDS refund within hours. Fast refunds and accurate filing are what make MY TAXATION one of the most trusted CA firms." },
-            { name: "Shispal Khari", stats: "1 review", date: "a year ago", category: "refund", rating: 5, comment: "I got my refund sir thanks for your quality services thank u MT" },
-            { name: "Saurav Choudhary", stats: "2 reviews", date: "7 months ago", category: "refund", rating: 5, comment: "I got my refund quickly and one of the best taxation firm", response: "We are glad to know that you received your TDS refund quickly. At MY TAXATION, our expert CAs work hard to ensure smooth and fast filing." },
-            { name: "Preeti Mander", stats: "1 review", date: "a year ago", category: "refund", rating: 5, comment: "Best quality taxation services by mT I got my refund quickly" },
-            { name: "gaurav kumar", stats: "1 review", date: "a year ago", category: "refund", rating: 5, comment: "One of the best taxation services by MT in Delhi NCR I got my refund quickly" },
+            { name: "Parveen Pk", stats: "2 reviews", date: "4 years ago", category: "gst", rating: 5, comment: "Very good service provider for ITR and GST", response: "Thanks praveen ji for your review" },
+            { name: "Satyender Yadav", stats: "5 reviews", date: "4 years ago", category: "service", rating: 5, comment: "I have availed Itr services,I am fully satisfied", response: "Thanks Satyender ji for availing ITR services." },
+            { name: "Parmila Yadav", stats: "1 review", date: "4 years ago", category: "service", rating: 5, comment: "Great service... thanks a lot", response: "Thanks Permila ji for having your ITR filed from MY Taxation." },
+            { name: "Ashok Kumar", stats: "2 reviews", date: "4 years ago", category: "itr", rating: 5, comment: "Best ITR service in Delhi NCR", response: "Thanks Ashok ji for availing services and getting quick refund" },
             { name: "Jeetu Tawer", stats: "2 reviews", date: "9 months ago", category: "refund", rating: 5, comment: "I got my refund best taxation firm", response: "Thank you for appreciating our team. Your satisfaction is our top priority." },
+            { name: "Bharat Kargwal", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Most reliable itr and taxation services" },
+            { name: "Ahir Jash", stats: "2 reviews", date: "4 years ago", category: "itr", rating: 5, comment: "I always trust on my taxation to file my ITR", response: "Thanks Jash ji,You are our proud customer from Gujarat" },
+            { name: "Akash deep Singh", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Best in itr taxation and gst" },
+            { name: "Guarav Samriya", stats: "2 reviews", date: "4 years ago", category: "itr", rating: 5, comment: "Best ITR WEBSITE IN INDIA", response: "Thanks Gaurav for your kind words" },
+            { name: "Sugriv Kumar", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Good experience of ITR filling", response: "Thank u very much Sugriv ji" },
+            { name: "Parmod Singh", stats: "1 review", date: "2 years ago", category: "service", rating: 5, comment: "Best services provided for ITR and GST" },
+            { name: "international villager", stats: "13 reviews", date: "2 years ago", category: "service", rating: 5, comment: "Best quality services by my taxation" },
+            { name: "Hidayat Ullah", stats: "1 review", date: "2 years ago", category: "service", rating: 5, comment: "Best quality service and best accounting work" },
+            { name: "jitender Rajvanshi", stats: "4 reviews", date: "2 years ago", category: "itr", rating: 5, comment: "Best in taxation and ITR" },
+            { name: "Vijender singh Bhati", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Best in the field of ITR" },
+            { name: "Jitender Dagar", stats: "1 review", date: "6 months ago", category: "refund", rating: 5, comment: "Best firm i got my refund quickly", response: "Thanks Jitender ji" },
             { name: "Ritik Dagar", stats: "1 review", date: "a year ago", category: "refund", rating: 5, comment: "I got my refund quickly top quality service" },
             { name: "Shooter bhai", stats: "1 review", date: "a year ago", category: "refund", rating: 5, comment: "I got my refund sir best quality service MT" },
-            { name: "Omparkash Deshwal", stats: "2 reviews", date: "2 years ago", category: "refund", rating: 5, comment: "I got my refund thank you sir best service" },
-            { name: "Ashok Rawat", stats: "1 review", date: "2 years ago", category: "refund", rating: 5, comment: "I got my refund very quickly thank you so much sir" },
             { name: "Avtar Singh", stats: "1 review", date: "a year ago", category: "refund", rating: 5, comment: "Thank u sir I got my refund quickly" },
-            { name: "Milan Vyas", stats: "164 reviews", date: "2 years ago", category: "refund", rating: 5, comment: "Best service. I avail the service for my family & got around refund of 1 Lakh..", response: "Thank u Milan ji for availing our services" },
             { name: "Sokeen Khan", stats: "1 review", date: "a year ago", category: "refund", rating: 5, comment: "I got my refund quickly thank u MT" },
-
-            // SERVICES CATEGORY
-            { name: "mithilesh srivastava", stats: "1 review", date: "4 years ago", category: "service", rating: 5, comment: "I am satisfied with there service And I recommend everyone specially my friends", response: "We are very happy that we have meet to your expectation of filing online income return." },
-            { name: "PRATEEK R ARORA", stats: "8 reviews", date: "4 years ago", category: "service", rating: 5, comment: "Very good service and fast response for ITR and other account related services. happy with the way their team handles my accounting.", response: "Thanks Prateek ji for availing services and getting refund within one week" },
-            { name: "Paresh Meher", stats: "3 reviews", date: "4 years ago", category: "service", rating: 5, comment: "Filling ITR is no more a cumbersome task. The service is very quick and resposive. . Wonderful job.", response: "Thanks Paresh ji for your encouraging words." },
-            { name: "Tarun Kumar Bhardwaj", stats: "4 reviews", date: "4 years ago", category: "service", rating: 5, comment: "I got my refund on time And good service available at low cost", response: "Thanks for availing salaried ITR services from our website." },
-            { name: "Vinod Kumar", stats: "1 review", date: "2 years ago", category: "service", rating: 5, comment: "I am fully satisfied through their services,they have throughly knowledge of tax and accounting", response: "Thank u very much ji" },
-            { name: "kanchan maurya", stats: "3 reviews", date: "4 years ago", category: "service", rating: 5, comment: "Great service.. file ITR through My Taxation nd save time nd money...👍", response: "Thanks kanchan ji.Your words gives us encouragement" },
-            { name: "pinki grover", stats: "2 reviews", date: "4 years ago", category: "service", rating: 5, comment: "My whole family files ITR throught my taxation.Their services are very good.", response: "We are happy that u had good experience with MY Taxation" },
-            { name: "Yogi Kumar", stats: "6 reviews", date: "4 years ago", category: "service", rating: 5, comment: "I am using their services since last five years. I am fully satisfied", response: "Yes Yogi ji,You are our consistent customer of IT return." },
-            { name: "Hidayat Ullah", stats: "1 review", date: "2 years ago", category: "service", rating: 5, comment: "Best quality service and best accounting work" },
-            { name: "arvind singh", stats: "7 reviews", date: "4 years ago", category: "service", rating: 5, comment: "Best financial services provider with accurate information and professional behaviour👍", response: "Thanks sir.Our experience of more than 8 years helps us in providing accurate services." },
-            { name: "Satyender Yadav", stats: "5 reviews", date: "4 years ago", category: "service", rating: 5, comment: "I have availed Itr services,I am fully satisfied", response: "Thanks Satyender ji for availing ITR services." },
-            { name: "Parmod Singh", stats: "1 review", date: "2 years ago", category: "service", rating: 5, comment: "Best services provided for ITR and GST" },
-            { name: "Yogesh 19ME2016", stats: "2 reviews", date: "4 years ago", category: "service", rating: 5, comment: "Service is good and very fast and easy to acess", response: "Thanks Yogesh ji.We are happy that u like services" },
-            { name: "mahak Raheja", stats: "2 reviews", date: "4 years ago", category: "service", rating: 5, comment: "Have good exprience service is good and very fast", response: "Thanks Raheja Ji." },
             { name: "Parsottam das Maharaj", stats: "1 review", date: "2 years ago", category: "service", rating: 5, comment: "Best quality services by mt" },
-            { name: "Parmila Yadav", stats: "1 review", date: "4 years ago", category: "service", rating: 5, comment: "Great service... thanks a lot", response: "Thanks Permila ji for having your ITR filed from MY Taxation." },
-            { name: "international villager", stats: "13 reviews", date: "2 years ago", category: "service", rating: 5, comment: "Best quality services by my taxation" },
-
-            // GST CATEGORY
-            { name: "Vishnu Kumar", stats: "1 review", date: "7 months ago", category: "gst", rating: 5, comment: "I tried many service providers for GST filing but MY TAXATION's professional approach and timely work are unmatched", response: "धन्यवाद! आपने MY TAXATION को Delhi में अपनी ITR filing और tax consultant service के लिए चुना।" },
-            { name: "vinod kumar", stats: "1 review", date: "7 months ago", category: "gst", rating: 5, comment: "Perfect place for GST Audit and return filing. The tram is polite patient and always ready to answer questions.", response: "Thank you for using our GST filing + ITR filing combo service." },
-            { name: "Sonu Kumar", stats: "1 review", date: "7 months ago", category: "gst", rating: 5, comment: "They solved every GST related problem registration, filling, or Even replying to notices", response: "We are thrilled you liked our online ITR filing service." },
-            { name: "Sanjeev Verma", stats: "1 review", date: "7 months ago", category: "gst", rating: 5, comment: "Perfect place for GST audit and return filing. The team is polite, patient.", response: "We are happy you liked our online ITR filing service." },
-            { name: "Mona Kumari", stats: "1 review", date: "7 months ago", category: "gst", rating: 5, comment: "i tried many place for gst filing, but my taxation's professional approach and timely work are unmatched.", response: "Thank you for trusting MY TAXATION for your first ITR filing in Delhi." },
-            { name: "Varsha Varsha", stats: "1 review", date: "2 years ago", category: "gst", rating: 5, comment: "Very good for itr gst and taxation. no 1 in delhi ncr and palam" },
-            { name: "Parveen Pk", stats: "2 reviews", date: "4 years ago", category: "gst", rating: 5, comment: "Very good service provider for ITR and GST", response: "Thanks praveen ji for your review" },
-            { name: "Sanjay Kumar", stats: "3 reviews", date: "3 years ago", category: "gst", rating: 5, comment: "Gst, itr, project report, they done every task efficiently and effectively", response: "Thanks Sanjay ji for Trusting in MT Team" }
+            { name: "Avtar Singh", stats: "1 review", date: "a year ago", category: "itr", rating: 5, comment: "Satisfied by their ITR SERVICES" },
+            { name: "Guri Singh", stats: "1 review", date: "a year ago", category: "itr", rating: 5, comment: "Satisfied by their ITR services" },
+            { name: "Gursevak Sandhu", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Good experience of itr" },
+            { name: "Mukesh Kumar", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Right ca for itr in delhi" },
+            { name: "Vijay Kumar", stats: "1 review", date: "2 years ago", category: "itr", rating: 5, comment: "Best for ITR in delhi" }
         ];
 
         function filterReviews(category) {
@@ -845,8 +840,8 @@
                         </p>
                         <p class="flex items-center gap-3">
                             <i data-lucide="mail" class="w-5 h-5 text-brand-500 shrink-0"></i>
-                            <a href="mailto:mytaxationonlychoice@gmail.com"
-                                class="hover:text-brand-600 transition-colors">mytaxationonlychoice@gmail.com</a>
+                            <a href="mailto:lalmakan2a@gmail.com"
+                                class="hover:text-brand-600 transition-colors">lalmakan2a@gmail.com</a>
                         </p>
                     </div>
                 </div>
