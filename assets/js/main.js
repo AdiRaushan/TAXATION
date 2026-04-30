@@ -97,17 +97,20 @@ async function handleHireSubmit(e) {
   }
 
   const formData = new FormData(form);
-  
+
   // Add Web3Forms fields
   formData.append("access_key", "46702f43-4e67-470e-91ba-29572e711aa5");
-  formData.append("subject", `Callback Request: ${formData.get('service')} from ${formData.get('name')}`);
+  formData.append(
+    "subject",
+    `Callback Request: ${formData.get("service")} from ${formData.get("name")}`,
+  );
   formData.append("from_name", "MY TAXATION (Callback Modal)");
   formData.append("replyto", "mytaxationonlychoice@gmail.com");
 
   try {
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const result = await response.json();
@@ -126,7 +129,11 @@ async function handleHireSubmit(e) {
       form.reset();
     } else {
       console.error("Submission error:", result);
-      alert("Submission failed: " + (result.message || "Unknown error") + ". Please try WhatsApp.");
+      alert(
+        "Submission failed: " +
+          (result.message || "Unknown error") +
+          ". Please try WhatsApp.",
+      );
     }
   } catch (error) {
     console.error("Network error:", error);
@@ -152,26 +159,32 @@ async function handleContactSubmit(e) {
   }
 
   const formData = new FormData(form);
-  
+
   formData.append("access_key", "46702f43-4e67-470e-91ba-29572e711aa5");
-  formData.append("subject", `New Inquiry from ${formData.get('name')}`);
+  formData.append("subject", `New Inquiry from ${formData.get("name")}`);
   formData.append("from_name", "MY TAXATION (Contact Page)");
   formData.append("replyto", "mytaxationonlychoice@gmail.com");
 
   try {
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const result = await response.json();
 
     if (result.success) {
-      alert("Thank you! Your message has been sent successfully. We will get back to you soon.");
+      alert(
+        "Thank you! Your message has been sent successfully. We will get back to you soon.",
+      );
       form.reset();
     } else {
       console.error("Submission error:", result);
-      alert("Something went wrong: " + (result.message || "Unknown error") + ". Please try again.");
+      alert(
+        "Something went wrong: " +
+          (result.message || "Unknown error") +
+          ". Please try again.",
+      );
     }
   } catch (error) {
     console.error("Network error:", error);
@@ -183,3 +196,5 @@ async function handleContactSubmit(e) {
     }
   }
 }
+
+
